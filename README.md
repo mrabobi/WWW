@@ -9,7 +9,9 @@
 
 ## Description
 
-The SmartHome application was created with the purpose of helping the smart devices owners manage and control them in an easy and user-friendly way. The owner can register his own devices (smart bulbs, smart locks, thermostats) and then monitor them and send commands. ( ex. change the color of the bulb or set a different room temperature) Another feature is to allow the owners to form groups of other users and grant them rights to control their devices.
+The SmartHome application was created with the purpose of helping the smart devices owners manage and control them in an easy and user-friendly way. The owner can register his own devices (smart bulbs, smart locks, thermostats) and then monitor them and send commands. ( ex. change the color of the bulb or set a different room temperature) Another feature is to allow the owners to form groups of other users and grant them rights to control their devices. 
+
+Addtional information about the project architecture and features can be found in the Resources folder.
 
 ## Technologies
 
@@ -26,6 +28,7 @@ The SmartHome application was created with the purpose of helping the smart devi
 
 * [BLOG - project status](https://fiismarthome.blogspot.com/2021/11/smarthome-project-status.html)
 * [Diagrams](https://github.com/mrabobi/WWW/tree/main/Resources/Diagrams)
+* [Scholarly-HTML](https://github.com/mrabobi/WWW/blob/main/Resources/Documentation/scholarly-html-SmartHome.html)
 
 ## DEV TEAM
 
