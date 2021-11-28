@@ -11,6 +11,17 @@
 
 The SmartHome application was created with the purpose of helping the smart devices owners manage and control them in an easy and user-friendly way. The owner can register his own devices (smart bulbs, smart locks, thermostats) and then monitor them and send commands. ( ex. change the color of the bulb or set a different room temperature) Another feature is to allow the owners to form groups of other users and grant them rights to control their devices.
 
+## Technologies
+
+<p align="center">
+  <a href="https://github.com/mrabobi/semestudy">
+    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjnfYZsrwreI1f_S9Rm5ypXsarNKb_kP0zxWvaOY_1vUjBPqKLfZPc6UVLdEeLIdDww2_EfWAtXud_LfWFmHej0D-DdtgXvukEXtyLnZeBZtYMSiPOfQFJ86qWSkPeUcUZthKYKz8RjJu9eI1UmpjaXoPBrxcM3xzbU_84JRkdODEg0gElMeNSJ-fB7hQ=s400" alt="Logo" width="500" height="150">
+  </a>
+
+</p>
+
+
+
 ## LINKS
 
 * [BLOG - project status](https://fiismarthome.blogspot.com/2021/11/smarthome-project-status.html)
