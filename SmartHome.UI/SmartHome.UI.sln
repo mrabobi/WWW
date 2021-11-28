@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome.UI", "SmartHome.UI\SmartHome.UI.csproj", "{E12BBD67-3E17-4000-BB0F-13CC8B166BF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome.UserAPI", "SmartHome.UserAPI\SmartHome.UserAPI.csproj", "{CCCDF957-3BF0-4065-AADD-BD8FEBD72AFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome.ThingAPI", "SmartHome.ThingAPI\SmartHome.ThingAPI.csproj", "{8A164F7B-36C3-448C-BA17-6F7F002BF744}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E12BBD67-3E17-4000-BB0F-13CC8B166BF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E12BBD67-3E17-4000-BB0F-13CC8B166BF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E12BBD67-3E17-4000-BB0F-13CC8B166BF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E12BBD67-3E17-4000-BB0F-13CC8B166BF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCCDF957-3BF0-4065-AADD-BD8FEBD72AFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCCDF957-3BF0-4065-AADD-BD8FEBD72AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCCDF957-3BF0-4065-AADD-BD8FEBD72AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCCDF957-3BF0-4065-AADD-BD8FEBD72AFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A164F7B-36C3-448C-BA17-6F7F002BF744}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A164F7B-36C3-448C-BA17-6F7F002BF744}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A164F7B-36C3-448C-BA17-6F7F002BF744}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A164F7B-36C3-448C-BA17-6F7F002BF744}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C9D2771-49A2-4669-A17D-4BA2C2286673}
+	EndGlobalSection
+EndGlobal
