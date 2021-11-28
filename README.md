@@ -25,6 +25,7 @@ The SmartHome application was created with the purpose of helping the smart devi
 ## LINKS
 
 * [BLOG - project status](https://fiismarthome.blogspot.com/2021/11/smarthome-project-status.html)
+* [Diagrams](https://github.com/mrabobi/WWW/tree/main/Resources/Diagrams)
 
 ## DEV TEAM
 
