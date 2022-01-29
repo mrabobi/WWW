@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartHome.UserAPI", "SmartH
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartHome.ThingAPI", "SmartHome.ThingAPI\SmartHome.ThingAPI.csproj", "{8A164F7B-36C3-448C-BA17-6F7F002BF744}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome.UI", "SmartHome.UI\SmartHome.UI.csproj", "{3EBF4DF1-B3A2-440C-A9BC-7E91E239ABF6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome.UI", "SmartHome.UI\SmartHome.UI.csproj", "{DA55DA4D-AD94-49C1-AE5A-777657F1DEC9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{8A164F7B-36C3-448C-BA17-6F7F002BF744}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A164F7B-36C3-448C-BA17-6F7F002BF744}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A164F7B-36C3-448C-BA17-6F7F002BF744}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3EBF4DF1-B3A2-440C-A9BC-7E91E239ABF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3EBF4DF1-B3A2-440C-A9BC-7E91E239ABF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3EBF4DF1-B3A2-440C-A9BC-7E91E239ABF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3EBF4DF1-B3A2-440C-A9BC-7E91E239ABF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA55DA4D-AD94-49C1-AE5A-777657F1DEC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA55DA4D-AD94-49C1-AE5A-777657F1DEC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA55DA4D-AD94-49C1-AE5A-777657F1DEC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA55DA4D-AD94-49C1-AE5A-777657F1DEC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
