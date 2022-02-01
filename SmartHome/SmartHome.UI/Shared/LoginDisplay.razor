@@ -1,9 +1,13 @@
-﻿<AuthorizeView>
+﻿@using SmartHome.UI_Auth.Utils
+<AuthorizeView>
     <Authorized>
-        Hello, @context.User.Identity.Name!
-        <a href="MicrosoftIdentity/Account/SignOut">Log out</a>
+        <a href="Identity/Account/Manage">Hello, @context.User.Identity.Name!</a>
+        <form method="post" action="MicrosoftIdentity/Account/SignOut">
+            <button type="submit" class="nav-link btn btn-link">Log out</button>
+        </form>
     </Authorized>
     <NotAuthorized>
         <a href="MicrosoftIdentity/Account/SignIn">Log in</a>
     </NotAuthorized>
 </AuthorizeView>
+

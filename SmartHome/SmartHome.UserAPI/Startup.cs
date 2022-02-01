@@ -2,20 +2,17 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.AzureAD.UI;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using SmartHome.UserAPI.Swagger;
-using System;
-using System.Collections.Generic;
+using Serilog;
+using SmartHome.Stardog.Interfaces;
+using SmartHome.Stardog.Services;
+using SmartHome.API.Swagger;
 using System.Linq;
-using System.Threading.Tasks;
 
-namespace SmartHome.UserAPI
+namespace SmartHome.API
 {
     public class Startup
     {
@@ -26,9 +23,15 @@ namespace SmartHome.UserAPI
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.ConfigureLogging(Configuration);
+            services.AddSingleton(log => Log.Logger);
+            services.AddSingleton(data => ConfigurationObjectBuilder.BuildStardogData(Configuration));
+            services.AddScoped<IUserService,UserService>();
+            services.AddScoped<IGroupsService, GroupService>();
+            services.AddScoped<ThingsService>();
             services.AddAuthentication(AzureADDefaults.BearerAuthenticationScheme)
                 .AddAzureADBearer(options => Configuration.Bind("AzureAd", options));
             services.AddControllers();
@@ -37,9 +40,9 @@ namespace SmartHome.UserAPI
                 x.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
                 x.SwaggerDoc("v1", new OpenApiInfo() { Title = "User API", Description = "An API used to retrieve and alter user-related data.", Version = "v1" });
             });
+
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

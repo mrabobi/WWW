@@ -1,15 +1,11 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using SmartHome.UserAPI.Interfaces;
-using SmartHome.UserAPI.Models;
+using SmartHome.Stardog.Interfaces;
+using SmartHome.Stardog.Models.Users;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
-namespace SmartHome.UserAPI.Controllers
+namespace SmartHome.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -21,16 +17,15 @@ namespace SmartHome.UserAPI.Controllers
         {
             _userService = userService;
         }
-        // GET: api/<BulbsController>
+
         [HttpGet]
-        public ActionResult<IEnumerable<User>> Get()
+        public ActionResult<IEnumerable<UserModel>> Get()
         {
             return Ok(_userService.GetAll());
         }
 
-        // GET api/<BulbsController>/5
         [HttpGet("{userId}")]
-        public ActionResult<User> Get(Guid userId)
+        public ActionResult<UserModel> Get(string userId)
         {
             if (_userService.UserExists(userId))
             {
@@ -42,9 +37,8 @@ namespace SmartHome.UserAPI.Controllers
             }
         }
 
-        // POST api/<BulbsController>
         [HttpPost]
-        public IActionResult Post([FromBody] User user)
+        public IActionResult Post([FromBody] UserModel user)
         {
             if (_userService.UserExists(user.UserId))
             {
@@ -58,26 +52,11 @@ namespace SmartHome.UserAPI.Controllers
             return CreatedAtAction(nameof(Get), new { userId = userResult.UserId}, userResult);
         }
 
-        [HttpPut]
-        public IActionResult Put([FromBody] User user)
-        {
-            if (!_userService.UserExists(user.UserId))
-            {
-                return BadRequest();
-            }
-            var bulbResult = _userService.UpdateUser(user);
-            if (bulbResult == null)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, "Could not update user");
-            }
-            return Ok();
-        }
-
         // DELETE api/<BulbsController>/5
         [HttpDelete("{userId}")]
-        public IActionResult Delete(Guid userId)
+        public IActionResult Delete(string userId)
         {
-            if (!_userService.UserExists(userId))
+            if (_userService.UserExists(userId))
             {
                 if (_userService.DeleteUser(userId))
                 {
@@ -92,6 +71,49 @@ namespace SmartHome.UserAPI.Controllers
             {
                 return BadRequest();
             }
+        }
+
+        [HttpPost("AddFriend")]
+        public IActionResult AddFriend([FromBody] UserFriendModel model)
+        {
+            if (_userService.CheckIfUsersAreFriends(model.FirstUserId,model.SecondUserId))
+            {
+                return BadRequest();
+            }
+            var success = _userService.AddFriend(model.FirstUserId,model.SecondUserId);
+            if (!success)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Could not create user");
+            }
+            return Ok();
+        }
+
+        [HttpDelete("RemoveFriend")]
+        public IActionResult RemoveFriend([FromBody] UserFriendModel model)
+        {
+            if (!_userService.CheckIfUsersAreFriends(model.FirstUserId, model.SecondUserId))
+            {
+                return BadRequest();
+            }
+
+            var success = _userService.RemoveFriend(model.FirstUserId, model.SecondUserId);
+            if (!success)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Could not create user");
+            }
+            return Ok();
+        }
+
+        [HttpGet("AvailableFriends/{userId}")]
+        public ActionResult<List<UserModel>> AvailableFriends(string userId)
+        {
+            return Ok(_userService.GetAvailableFriends(userId));
+        }
+
+        [HttpGet("GetFriends/{userId}")]
+        public ActionResult<List<UserModel>> GetFriends(string userId)
+        {
+            return Ok(_userService.GetFriends(userId));
         }
     }
 }

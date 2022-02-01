@@ -1,0 +1,39 @@
+﻿@page "/Groups"
+@using SmartHome.UI.Data
+@if (UserGroups == null)
+{
+    <MudGrid>
+        <MudItem xs="12">
+            <MudProgressLinear Color="Color.Primary" Size="@Size.Large" Indeterminate="true" Class="my-7" />
+        </MudItem>
+    </MudGrid>
+}
+else
+{
+    <MudGrid>
+        <MudItem xs="2" />
+        <MudItem xs="8">
+            <MudTable Items="@UserGroups" Dense="true" Hover="true" Bordered="true" Striped="true" Loading="@DataIsLoading" Filter="new Func<Group, bool>(FilterFunc1)">
+                <ToolBarContent>
+                    <MudText Typo="Typo.h6">Groups</MudText>
+                    <MudSpacer />
+                    <MudTextField @bind-Value="searchString1" Placeholder="Search" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" Immediate="true" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+                </ToolBarContent>
+                <HeaderContent>
+                    <MudTh Style="text-align:center">Name</MudTh>
+                    <MudTh Style="text-align:center"></MudTh>
+                    <MudTh Style="text-align:center"></MudTh>
+                </HeaderContent>
+                <RowTemplate>
+                    <MudTd Style="text-align:center">@context.GroupName</MudTd>
+                    <MudTd Style="text-align:center"><MudButton IconClass="@Icons.Filled.Delete" FullWidth="true" Color="@Color.Primary" Variant="@Variant.Filled" OnClick="() => GoToDetails(context.GroupId)">Details</MudButton></MudTd>
+                    <MudTd Style="text-align:center"><MudButton IconClass="@Icons.Filled.Delete" FullWidth="true" Color="@Color.Warning" Variant="@Variant.Filled" OnClick="() => RemoveGroup(context.GroupId)">Delete</MudButton></MudTd>
+                </RowTemplate>
+                <PagerContent>
+                    <MudTablePager />
+                </PagerContent>
+            </MudTable>
+        </MudItem>
+        <MudItem xs="2" />
+    </MudGrid>
+}

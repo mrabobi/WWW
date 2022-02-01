@@ -1,9 +1,10 @@
 ﻿using SmartHome.UI.Data;
 
-namespace SmartHome.UI.Utils
+namespace SmartHome.UI_Auth.Utils
 {
     public class AppState
     {
-        public static User CurrentUser { get; set; }
+        public static UserModel CurrentUser { get; set; }
+        public static string CurrentGroupId { get; set; }
     }
 }

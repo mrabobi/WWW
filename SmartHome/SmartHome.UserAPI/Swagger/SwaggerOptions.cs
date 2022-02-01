@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SmartHome.UserAPI.Swagger
+namespace SmartHome.API.Swagger
 {
     public class SwaggerOptions
     {

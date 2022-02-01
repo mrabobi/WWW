@@ -1,0 +1,90 @@
+﻿@page "/GroupDetails"
+<h3>GroupDetails</h3>
+@using SmartHome.UI.Data
+@if (GroupData == null)
+{
+    <MudGrid>
+        <MudItem xs="12">
+            <MudProgressLinear Color="Color.Primary" Size="@Size.Large" Indeterminate="true" Class="my-7" />
+        </MudItem>
+    </MudGrid>
+}
+else
+{
+    <MudGrid>
+        <MudItem xs="2" />
+        <MudItem xs="8">
+            <MudTable Items="@GroupData.GroupUsers" Dense="true" Hover="true" Bordered="true" Striped="true" Loading="@DataIsLoading" Filter="new Func<UserModel, bool>(FilterFuncUsers1)">
+                <ToolBarContent>
+                    <MudText Typo="Typo.h6">Users in @GroupData.Group.GroupName</MudText>
+                    <MudSpacer />
+                    <MudTextField @bind-Value="searchStringUsers" Placeholder="Search" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" Immediate="true" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+                </ToolBarContent>
+                <HeaderContent>
+                    <MudTh Style="text-align:center">UserName</MudTh>
+                    <MudTh Style="text-align:center">First Name</MudTh>
+                    <MudTh Style="text-align:center">Last Name</MudTh>
+                    <MudTh></MudTh>
+                </HeaderContent>
+                <RowTemplate>
+                    <MudTd Style="text-align:center">@context.DisplayName</MudTd>
+                    <MudTd Style="text-align:center">@context.FirstName</MudTd>
+                    <MudTd Style="text-align:center">@context.LastName</MudTd>
+                    <MudTd Style="text-align:center"><MudButton IconClass="@Icons.Filled.Delete" Color="@Color.Warning" Variant="@Variant.Filled" FullWidth="true" OnClick="() => RemoveUserFromGroup(context.UserId)">Delete</MudButton></MudTd>
+                </RowTemplate>
+                <PagerContent>
+                    <MudTablePager />
+                </PagerContent>
+            </MudTable>
+        </MudItem>
+        <MudItem xs="2" />
+        <MudItem xs="3" />
+        <MudItem xs="6">
+            <MudAutocomplete T="string" FullWidth="true" Label="Users" @bind-Value="SelectedValueUsers" SearchFunc="@SearchUsers"
+                             ResetValueOnEmptyText="true"
+                             CoerceText="true" CoerceValue="true" />
+        </MudItem>
+        <MudItem xs="3" />
+        <MudItem xs="4" />
+        <MudItem xs="4">
+            <MudButton IconClass="@Icons.Filled.Add" Color="@Color.Success" Variant="@Variant.Filled" FullWidth="true" OnClick="AddUserToGroup">Add User</MudButton>
+        </MudItem>
+        <MudItem xs="4" />
+        <MudItem xs="2" />
+        <MudItem xs="8">
+            <MudTable Items="@GroupData.GroupThings" Dense="true" Hover="true" Bordered="true" Striped="true" Loading="@DataIsLoading" Filter="new Func<ThingViewModel, bool>(FilterFuncThings1)">
+                <ToolBarContent>
+                    <MudText Typo="Typo.h6">Claims for @GroupData.Group.GroupName</MudText>
+                    <MudSpacer />
+                    <MudTextField @bind-Value="searchStringThings" Placeholder="Search" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" Immediate="true" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+                </ToolBarContent>
+                <HeaderContent>
+                    <MudTh Style="text-align:center">Title</MudTh>
+                    <MudTh Style="text-align:center">Description</MudTh>
+                    <MudTh></MudTh>
+                </HeaderContent>
+                <RowTemplate>
+                    <MudTd Style="text-align:center">@context.title</MudTd>
+                    <MudTd Style="text-align:center">@context.description</MudTd>
+                    <MudTd Style="text-align:center"><MudButton IconClass="@Icons.Filled.Delete" Color="@Color.Warning" Variant="@Variant.Filled" FullWidth="true" OnClick="() => RemoveThingClaim(context.validation_url)">Delete</MudButton></MudTd>
+                </RowTemplate>
+                <PagerContent>
+                    <MudTablePager />
+                </PagerContent>
+            </MudTable>
+        </MudItem>
+        <MudItem xs="2" />
+        <MudItem xs="3" />
+        <MudItem xs="6">
+            <MudAutocomplete T="string" FullWidth="true" Label="Devices" @bind-Value="SelectedValueThings" SearchFunc="@SearchThings"
+                             ResetValueOnEmptyText="true"
+                             CoerceText="true" CoerceValue="true" />
+        </MudItem>
+        <MudItem xs="3" />
+        <MudItem xs="4" />
+        <MudItem xs="4">
+            <MudButton IconClass="@Icons.Filled.Add" Color="@Color.Success" Variant="@Variant.Filled" FullWidth="true" OnClick="AddThingClaimToGroup">Add Thing Claim</MudButton>
+        </MudItem>
+        <MudItem xs="4" />
+    </MudGrid>
+}

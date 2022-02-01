@@ -1,7 +1,54 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
-
-Welcome to your new app.
-
-<SurveyPrompt Title="How is Blazor working for you?" />
+<MudGrid>
+    <MudItem xs="4">
+        <a href="Friends">
+            <MudCard>
+                <MudCardMedia Image="Images/Friends.jpg" Height="300" />
+                <MudCardContent>
+                    <MudText Typo="Typo.h4">Friends</MudText>
+                </MudCardContent>
+            </MudCard>
+        </a>
+    </MudItem>
+    <MudItem xs="4">
+        <a href="Groups">
+            <MudCard>
+                <MudCardMedia Image="Images/Groups.jpg" Height="300" />
+                <MudCardContent>
+                    <MudText Typo="Typo.h4">Groups</MudText>
+                </MudCardContent>
+            </MudCard>
+        </a>
+    </MudItem>
+    <MudItem xs="4">
+        <a href="CreateGroup">
+            <MudCard>
+                <MudCardMedia Image="Images/CreateGroup.jpg" Height="300" />
+                <MudCardContent>
+                    <MudText Typo="Typo.h4">Create Group</MudText>
+                </MudCardContent>
+            </MudCard>
+        </a>
+    </MudItem>
+    <MudItem xs="4">
+        <a href="ScanDevices">
+            <MudCard>
+                <MudCardMedia Image="Images/ScanDevices.jpg" Height="300" />
+                <MudCardContent>
+                    <MudText Typo="Typo.h4">Scan Devices</MudText>
+                </MudCardContent>
+            </MudCard>
+        </a>
+    </MudItem>
+    <MudItem xs="4">
+        <a href="Devices">
+            <MudCard>
+                <MudCardMedia Image="Images/Devices.jpg" Height="300" />
+                <MudCardContent>
+                    <MudText Typo="Typo.h4">Devices</MudText>
+                </MudCardContent>
+            </MudCard>
+        </a>
+    </MudItem>
+</MudGrid>

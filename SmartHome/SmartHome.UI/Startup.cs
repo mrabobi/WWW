@@ -7,8 +7,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Identity.Web;
 using Microsoft.Identity.Web.UI;
 using MudBlazor.Services;
-using SmartHome.UI.Data;
-using SmartHome.UI.Utils;
+using Serilog;
+using SmartHome.UI.ApiClients;
+using SmartHome.UI_Auth.Utils;
 
 namespace SmartHome.UI
 {
@@ -25,6 +26,12 @@ namespace SmartHome.UI
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.ConfigureLogging(Configuration);
+            services.AddSingleton(log => Log.Logger);
+            var usersApiUrl = Configuration.GetValue<string>("UsersApiUrl");
+            services.AddScoped(c => new UsersApiClient(usersApiUrl));
+            B2CExtensions.ApiClient = new UsersApiClient(usersApiUrl);
             services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
                 .AddMicrosoftIdentityWebApp(Configuration.GetSection("AzureAd"));
             services.AddControllersWithViews()
@@ -40,11 +47,10 @@ namespace SmartHome.UI
             services.AddServerSideBlazor()
                 .AddMicrosoftIdentityConsentHandler();
             services.AddMudServices();
-            var user = new User();
-            Configuration.GetSection("User").Bind(user);
-            AppState.CurrentUser = user;
             services.AddSingleton<AppState>();
-
+            services.Configure<OpenIdConnectOptions>(OpenIdConnectDefaults.AuthenticationScheme, options =>
+            options.Events.OnTicketReceived = B2CExtensions.OnTicketReceivedCallback
+            );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,8 +72,8 @@ namespace SmartHome.UI
 
             app.UseRouting();
 
-            //app.UseAuthentication();
-            //app.UseAuthorization();
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

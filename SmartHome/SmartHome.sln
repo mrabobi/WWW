@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31702.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartHome.UserAPI", "SmartHome.UserAPI\SmartHome.UserAPI.csproj", "{CCCDF957-3BF0-4065-AADD-BD8FEBD72AFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartHome.API", "SmartHome.UserAPI\SmartHome.API.csproj", "{CCCDF957-3BF0-4065-AADD-BD8FEBD72AFA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartHome.ThingAPI", "SmartHome.ThingAPI\SmartHome.ThingAPI.csproj", "{8A164F7B-36C3-448C-BA17-6F7F002BF744}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome.UI", "SmartHome.UI\SmartHome.UI.csproj", "{DA55DA4D-AD94-49C1-AE5A-777657F1DEC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartHome.UI", "SmartHome.UI\SmartHome.UI.csproj", "{B1D9EC0E-00F8-4035-AE13-82439655D9AF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartHome.Stardog", "SmartHome.Stardog\SmartHome.Stardog.csproj", "{118662B9-C3E6-4D7F-B59B-D8528E4EBD4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +25,14 @@ Global
 		{8A164F7B-36C3-448C-BA17-6F7F002BF744}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A164F7B-36C3-448C-BA17-6F7F002BF744}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A164F7B-36C3-448C-BA17-6F7F002BF744}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DA55DA4D-AD94-49C1-AE5A-777657F1DEC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DA55DA4D-AD94-49C1-AE5A-777657F1DEC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DA55DA4D-AD94-49C1-AE5A-777657F1DEC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DA55DA4D-AD94-49C1-AE5A-777657F1DEC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1D9EC0E-00F8-4035-AE13-82439655D9AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1D9EC0E-00F8-4035-AE13-82439655D9AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1D9EC0E-00F8-4035-AE13-82439655D9AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1D9EC0E-00F8-4035-AE13-82439655D9AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{118662B9-C3E6-4D7F-B59B-D8528E4EBD4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{118662B9-C3E6-4D7F-B59B-D8528E4EBD4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{118662B9-C3E6-4D7F-B59B-D8528E4EBD4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{118662B9-C3E6-4D7F-B59B-D8528E4EBD4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,25 +1,27 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using SmartHome.UserAPI.Interfaces;
-using SmartHome.UserAPI.Models;
-using System;
+using SmartHome.Stardog.Interfaces;
+using SmartHome.Stardog.Models;
+using SmartHome.Stardog.Models.Users;
+using SmartHome.Stardog.Services;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
-namespace SmartHome.UserAPI.Controllers
+namespace SmartHome.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class GroupsController : ControllerBase
     {
         private readonly IGroupsService _groupsService;
+        private readonly IUserService _userService;
+        private readonly ThingsService _thingsService;
 
-        public GroupsController(IGroupsService userService)
+        public GroupsController(IGroupsService groupsService,IUserService userService,ThingsService thingsService)
         {
-            _groupsService = userService;
+            _groupsService = groupsService;
+            _userService = userService;
+            _thingsService = thingsService;
         }
 
         [HttpGet]
@@ -28,16 +30,34 @@ namespace SmartHome.UserAPI.Controllers
             return Ok(_groupsService.GetAll());
         }
 
-        // GET: api/<BulbsController>
-        [HttpGet("GetGroupsByOnwer")]
-        public ActionResult<IEnumerable<Group>> GetGroupsByOnwer(Guid ownerId)
+        [HttpGet("GetGroupsByOnwer/{ownerId}")]
+        public ActionResult<IEnumerable<Group>> GetGroupsByOnwer(string ownerId)
         {
-            return Ok(_groupsService.GetGroupByOwner(ownerId));
+            return Ok(_groupsService.GetGroupsByOwner(ownerId));
         }
 
-        // GET api/<BulbsController>/5
+        [HttpGet("GetGroupsByOnwerWithUsers/{ownerId}")]
+        public ActionResult<IEnumerable<GroupWithData>> GetGroupsByOnwerWithUsers(string ownerId)
+        {
+            var groupsWithUsers = new List<GroupWithData>();
+            var groups = _groupsService.GetGroupsByOwner(ownerId);
+            foreach(var group in groups)
+            {
+                var groupUsers = _groupsService.GetUsersInGroup(group.GroupId).Select(u=>_userService.GetById(u)).ToList();
+                var availalbeUsers = _groupsService.GetAvailableUsersForGroup(group.GroupId).Select(u => _userService.GetById(u)).ToList();
+                var groupWithUsers = new GroupWithData()
+                {
+                    Group = group,
+                    GroupUsers = groupUsers,
+                    AvailableUsers = availalbeUsers
+                };
+                groupsWithUsers.Add(groupWithUsers);
+            }
+            return Ok(groupsWithUsers);
+        }
+
         [HttpGet("{groupdId}")]
-        public ActionResult<User> Get(Guid groupdId)
+        public ActionResult<Group> Get(string groupdId)
         {
             if (_groupsService.GroupExists(groupdId))
             {
@@ -49,11 +69,36 @@ namespace SmartHome.UserAPI.Controllers
             }
         }
 
-        // POST api/<BulbsController>
+        [HttpGet("GetWithUsers/{groupdId}")]
+        public ActionResult<Group> GetWithUsers(string groupdId)
+        {
+            if (_groupsService.GroupExists(groupdId))
+            {
+                var group = _groupsService.GetById(groupdId);
+                var groupUsers = _groupsService.GetUsersInGroup(groupdId).Select(u => _userService.GetById(u)).ToList();
+                var availableUsers = _groupsService.GetAvailableUsersForGroup(groupdId).Select(u => _userService.GetById(u)).ToList();
+                var availableThings = _thingsService.GetForGroup(groupdId, false);
+                var groupThings = _thingsService.GetForGroup(groupdId, true);
+                var groupWithUsers = new GroupWithData()
+                {
+                    Group = group,
+                    GroupUsers = groupUsers,
+                    AvailableUsers = availableUsers,
+                    AvailableThings=availableThings,
+                    GroupThings=groupThings
+                };
+                return Ok(groupWithUsers);
+            }
+            else
+            {
+                return BadRequest();
+            }
+        }
+
         [HttpPost]
         public IActionResult Post([FromBody] Group group)
         {
-            if (_groupsService.GroupExists(group.GroupId))
+            if (_groupsService.GroupExists(group.GroupName,group.OwnerId))
             {
                 return BadRequest();
             }
@@ -65,24 +110,8 @@ namespace SmartHome.UserAPI.Controllers
             return CreatedAtAction(nameof(Get), new { groupId = groupResult.GroupId }, groupResult);
         }
 
-        [HttpPut]
-        public IActionResult Put([FromBody] Group group)
-        {
-            if (_groupsService.GroupExists(group.GroupId))
-            {
-                return BadRequest();
-            }
-            var groupResult = _groupsService.UpdateGroup(group);
-            if (groupResult == null)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, "Could not update group");
-            }
-            return Ok();
-        }
-
-        // DELETE api/<BulbsController>/5
         [HttpDelete("{groupdId}")]
-        public IActionResult Delete(Guid groupdId)
+        public IActionResult Delete(string groupdId)
         {
             if (_groupsService.GroupExists(groupdId))
             {
@@ -102,13 +131,13 @@ namespace SmartHome.UserAPI.Controllers
         }
 
         [HttpPost("AddUserToGroup")]
-        public IActionResult AddUserToGroup([FromBody] GroupResourceModel model)
+        public IActionResult AddUserToGroup([FromBody] UserGroupModel model)
         {
-            if (_groupsService.UserIsInGroup(model.groupId,model.otherEntityId))
+            if (_groupsService.UserIsInGroup(model.GroupId,model.UserId))
             {
                 return BadRequest();
             }
-            var success = _groupsService.AddUserToGroup(model.groupId,model.otherEntityId);
+            var success = _groupsService.AddUserToGroup(model.UserId,model.GroupId);
             if (!success)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, "Could add user to group");
@@ -116,14 +145,14 @@ namespace SmartHome.UserAPI.Controllers
             return Ok();
         }
 
-        [HttpPost("RemoveUserFromGroup")]
-        public IActionResult RemoveUserFromGroup([FromBody] GroupResourceModel model)
+        [HttpDelete("RemoveUserFromGroup")]
+        public IActionResult RemoveUserFromGroup([FromBody] UserGroupModel model)
         {
-            if (!_groupsService.UserIsInGroup(model.groupId,model.otherEntityId))
+            if (!_groupsService.UserIsInGroup(model.GroupId,model.UserId))
             {
                 return BadRequest();
             }
-            var success = _groupsService.RemoveUserFromGroup(model.groupId,model.otherEntityId);
+            var success = _groupsService.RemoveUserFromGroup(model.UserId, model.GroupId);
             if (!success)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, "Could not remove user from group");
@@ -134,11 +163,11 @@ namespace SmartHome.UserAPI.Controllers
         [HttpPost("AddClaimToGroup")]
         public IActionResult AddClaimToGroup([FromBody] GroupResourceModel model)
         {
-            if (_groupsService.GroupHasClaim(model.groupId, model.otherEntityId))
+            if (_groupsService.GroupHasClaim(model.GroupId, model.Claim))
             {
                 return BadRequest();
             }
-            var success = _groupsService.AddClaimToGroup(model.groupId, model.otherEntityId);
+            var success = _groupsService.AddClaimToGroup(model.GroupId, model.Claim);
             if (!success)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, "Could add claim to group");
@@ -146,19 +175,43 @@ namespace SmartHome.UserAPI.Controllers
             return Ok();
         }
 
-        [HttpPost("RemoveClaimFromGroup")]
+        [HttpDelete("RemoveClaimFromGroup")]
         public IActionResult RemoveClaimFromGroup([FromBody] GroupResourceModel model)
         {
-            if (!_groupsService.GroupHasClaim(model.groupId, model.otherEntityId))
+            if (!_groupsService.GroupHasClaim(model.GroupId, model.Claim))
             {
                 return BadRequest();
             }
-            var success = _groupsService.RemoveClaimFromGroup(model.groupId, model.otherEntityId);
+            var success = _groupsService.RemoveClaimFromGroup(model.GroupId, model.Claim);
             if (!success)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, "Could not remove claim from group");
             }
             return Ok();
+        }
+
+        [HttpGet("UsersInGroup/{groupId}")]
+        public ActionResult<List<UserModel>> GetUsersInGroup(string groupId)
+        {
+            var userIds = _groupsService.GetUsersInGroup(groupId);
+            var users = new List<UserModel>();
+            foreach (var userId in userIds)
+            {
+                users.Add(_userService.GetById(userId));
+            }
+            return Ok(users);
+        }
+
+        [HttpGet("AvailalbeUsers/{groupId}")]
+        public ActionResult<List<UserModel>> GetAvailableUsersForGroup(string groupId)
+        {
+            var userIds = _groupsService.GetAvailableUsersForGroup(groupId);
+            var users = new List<UserModel>();
+            foreach(var userId in userIds)
+            {
+                users.Add(_userService.GetById(userId));
+            }
+            return Ok(users);
         }
     }
 }
