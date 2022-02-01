@@ -1,6 +1,33 @@
 ﻿@page "/ScanDevices"
-<h3>ScanDevices</h3>
-
-@code {
-
+@if (Things == null)
+{
+    <MudGrid>
+        <MudItem xs="12">
+            <MudProgressLinear Color="Color.Primary" Size="@Size.Large" Indeterminate="true" Class="my-7" />
+        </MudItem>
+    </MudGrid>
+}
+else
+{
+<MudGrid>
+    @foreach (var thing in Things)
+    {
+        <MudItem xs="4">
+            <MudCard>
+                <MudCardHeader>
+                    <CardHeaderContent>
+                        <MudText Typo="Typo.h6">@thing.title</MudText>
+                    </CardHeaderContent>
+                    </MudCardHeader>
+                    <MudCardContent>
+                        <MudText Typo="Typo.body2">@thing.description</MudText>
+                        <MudTextField T="string" FullWidth="true" Label="Activation Key" @bind-Value="thing.access_code" />
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudButton IconClass="@Icons.Filled.Add" Color="@Color.Success" Variant="@Variant.Filled" FullWidth="true" OnClick="()=>ActivateThing(thing)">Activate</MudButton>
+                    </MudCardActions>
+            </MudCard>
+        </MudItem>
+    }
+ </MudGrid>
 }

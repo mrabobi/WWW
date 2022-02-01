@@ -202,7 +202,7 @@ namespace SmartHome.API.Controllers
             return Ok(users);
         }
 
-        [HttpGet("AvailalbeUsers/{groupId}")]
+        [HttpGet("AvailabeUsers/{groupId}")]
         public ActionResult<List<UserModel>> GetAvailableUsersForGroup(string groupId)
         {
             var userIds = _groupsService.GetAvailableUsersForGroup(groupId);

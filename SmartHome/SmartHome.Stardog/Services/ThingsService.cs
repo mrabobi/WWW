@@ -155,11 +155,27 @@ namespace SmartHome.Stardog.Services
             try
             {
                 var connector = GetStardogConnector();
-                var query = $"SELECT DISTINCT *{{" +
-                    $"?thing a  td:Thing; " +
-                    $"td:title ?title; " +
-                    $"td:description ?description; " +
-                    $"FILTER({(inGroup?"":"NOT ")}EXISTS{{<{GetGroupObjectUrl(_data.BaseObjectUrl, groupId)}> foaf:topic_interest ?thing}})}}";
+                var query = "";
+                if (inGroup)
+                {
+                    query = $"SELECT DISTINCT *{{" +
+                        $"?thing a  td:Thing; " +
+                        $"td:title ?title; " +
+                        $"td:description ?description; " +
+                        $"td:id ?thingId;" +
+                        $"FILTER(EXISTS{{<{GetGroupObjectUrl(_data.BaseObjectUrl, groupId)}> foaf:topic_interest ?thing}})}}";
+                }
+                else
+                {
+                    query = $"SELECT DISTINCT *{{" +
+                     $"?thing a  td:Thing; " +
+                     $"td:title ?title; " +
+                     $"td:description ?description; " +
+                     $"fibo:owner ?ownerId;" +
+                     $"td:id ?thingId;" +
+                     $"FILTER(NOT EXISTS{{<{GetGroupObjectUrl(_data.BaseObjectUrl, groupId)}> foaf:topic_interest ?thing}}" +
+                     $"&& EXISTS{{<{GetGroupObjectUrl(_data.BaseObjectUrl, groupId)}> foaf:maker ?ownerId}})}}";
+                }
                 var result = (SparqlResultSet)connector.Query(query);
                 var things = AssembleQueryResultThingView(result);
                 return things;
@@ -465,7 +481,8 @@ namespace SmartHome.Stardog.Services
             {
                 title = result["title"]?.ToString(),
                 description = result["description"]?.ToString(),
-                validation_url=result["thing"]?.ToString()
+                validation_url=result["thing"]?.ToString(),
+                thingId=result["thingId"]?.ToString()
             };
             return concept;
         }

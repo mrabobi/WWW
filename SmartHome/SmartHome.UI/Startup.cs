@@ -29,8 +29,11 @@ namespace SmartHome.UI
 
             services.ConfigureLogging(Configuration);
             services.AddSingleton(log => Log.Logger);
-            var usersApiUrl = Configuration.GetValue<string>("UsersApiUrl");
+            var usersApiUrl = Configuration.GetValue<string>("ApiUrl");
+            var deviceApiUrl = Configuration.GetValue<string>("DeviceApiUrl");
+            AppState.DeviceApiUrl = deviceApiUrl;
             services.AddScoped(c => new UsersApiClient(usersApiUrl));
+            services.AddScoped(c => new ThingsApiClient(usersApiUrl));
             B2CExtensions.ApiClient = new UsersApiClient(usersApiUrl);
             services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
                 .AddMicrosoftIdentityWebApp(Configuration.GetSection("AzureAd"));

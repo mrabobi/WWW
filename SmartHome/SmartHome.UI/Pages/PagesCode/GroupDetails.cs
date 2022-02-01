@@ -23,7 +23,7 @@ namespace SmartHome.UI.Pages
         private string searchStringUsers = "";
         private string searchStringThings = "";
         public List<string> AvaiableUsersNames => GroupData.AvailableUsers.Select(u => u.DisplayName).ToList();
-        public List<string> AvaiableThingNames => GroupData.AvailableThings.Select(u => u.title).ToList();
+        public List<string> AvaiableThingNames => GroupData.AvailableThings.Select(u =>u.thingId).ToList();
         public string SelectedValueUsers { get; set; }
 
         public string SelectedValueThings { get; set; }
@@ -52,7 +52,7 @@ namespace SmartHome.UI.Pages
 
             if (string.IsNullOrEmpty(value))
             {
-                return AvaiableUsersNames;
+                return AvaiableThingNames;
             }
             return AvaiableThingNames.Where(x => x.Contains(value, StringComparison.InvariantCultureIgnoreCase));
         }
@@ -117,7 +117,7 @@ namespace SmartHome.UI.Pages
             var success = await ApiClient.AddUserToGroup(new UserGroupModel { UserId = userId, GroupId = GroupData.Group.GroupId });
             if (!success)
             {
-                SnackBar.Add("Could not user to group", Severity.Error);
+                SnackBar.Add("Could not add user to group", Severity.Error);
             }
             else
             {
@@ -130,41 +130,42 @@ namespace SmartHome.UI.Pages
 
         private async Task RemoveThingClaim(string thingId)
         {
-            var currentUser = AppState.CurrentUser.UserId;
-            var success = await ApiClient.RemoveFriend(new UserFriendModel { FirstUserId = currentUser, SecondUserId = thingId });
+            var currentGroup = AppState.CurrentGroupId;
+            var success = await ApiClient.RemoveClaim(new GroupResourceModel { GroupId = currentGroup, Claim = thingId });
             if (!success)
             {
-                SnackBar.Add("Could not remove user", Severity.Error);
+                SnackBar.Add("Could not remove claim", Severity.Error);
             }
             else
             {
-                var deletedFriend = GroupData.GroupUsers.FirstOrDefault(user => user.UserId == thingId);
-                GroupData.AvailableUsers.Add(deletedFriend);
-                GroupData.GroupUsers = GroupData.GroupUsers.Where(user => user.UserId != thingId).ToList();
-                SnackBar.Add("User removed", Severity.Success);
+                var deletedClaim = GroupData.GroupThings.FirstOrDefault(thing => thing.thingId == thingId);
+                GroupData.AvailableThings.Add(deletedClaim);
+                GroupData.GroupThings = GroupData.GroupThings.Where(thing => thing.thingId != thingId).ToList();
+                SnackBar.Add("Claim removed", Severity.Success);
             }
         }
 
         private async Task AddThingClaimToGroup()
         {
-            var userId = GroupData.AvailableUsers.FirstOrDefault(u => u.DisplayName == SelectedValueThings)?.UserId;
-            if (string.IsNullOrEmpty(userId))
+            var thingId = GroupData.AvailableThings.FirstOrDefault(t =>t.thingId  == SelectedValueThings)?.thingId;
+            var currrentGroup = AppState.CurrentGroupId;
+            if (string.IsNullOrEmpty(thingId))
             {
-                SnackBar.Add("Select a user", Severity.Warning);
+                SnackBar.Add("Select a claim", Severity.Warning);
                 return;
             }
             var currentUser = AppState.CurrentUser.UserId;
-            var success = await ApiClient.AddUserToGroup(new UserGroupModel { UserId = currentUser, GroupId = GroupData.Group.GroupId });
+            var success = await ApiClient.AddClaim(new GroupResourceModel { GroupId = currrentGroup, Claim = thingId });
             if (!success)
             {
-                SnackBar.Add("Could not user to group", Severity.Error);
+                SnackBar.Add("Could not add claim to group", Severity.Error);
             }
             else
             {
-                var addedUser = GroupData.AvailableUsers.FirstOrDefault(user => user.UserId == userId);
-                GroupData.GroupUsers.Add(addedUser);
-                GroupData.AvailableUsers = GroupData.AvailableUsers.Where(user => user.UserId != userId).ToList();
-                SnackBar.Add("User added", Severity.Success);
+                var addedClaim = GroupData.AvailableThings.FirstOrDefault(thing => thing.thingId == thingId);
+                GroupData.GroupThings.Add(addedClaim);
+                GroupData.AvailableThings = GroupData.AvailableThings.Where(thing => thing.thingId != thingId).ToList();
+                SnackBar.Add("Claim added", Severity.Success);
             }
         }
 

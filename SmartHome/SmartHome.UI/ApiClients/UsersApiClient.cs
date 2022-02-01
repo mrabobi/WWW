@@ -11,7 +11,7 @@ namespace SmartHome.UI.ApiClients
 {
     public class UsersApiClient:ApiClient
     {
-        protected UsersApiClient(string apiUrl) : base(apiUrl)
+        public UsersApiClient(string apiUrl) : base(apiUrl)
         {
         }
 
@@ -57,6 +57,30 @@ namespace SmartHome.UI.ApiClients
             {
                 Method = HttpMethod.Delete,
                 RequestUri = new Uri($"{HttpClient.BaseAddress}Users/RemoveFriend"),
+                Content = new StringContent(JsonConvert.SerializeObject(model), Encoding.UTF8, MediaTypeNames.Application.Json),
+            };
+            var response = await HttpClient.SendAsync(request).ConfigureAwait(false);
+            return response.IsSuccessStatusCode;
+        }
+
+        public async Task<bool> AddClaim(GroupResourceModel model)
+        {
+            var request = new HttpRequestMessage
+            {
+                Method = HttpMethod.Post,
+                RequestUri = new Uri($"{HttpClient.BaseAddress}Groups/AddClaimToGroup"),
+                Content = new StringContent(JsonConvert.SerializeObject(model), Encoding.UTF8, MediaTypeNames.Application.Json),
+            };
+            var response = await HttpClient.SendAsync(request).ConfigureAwait(false);
+            return response.IsSuccessStatusCode;
+        }
+
+        public async Task<bool> RemoveClaim(GroupResourceModel model)
+        {
+            var request = new HttpRequestMessage
+            {
+                Method = HttpMethod.Delete,
+                RequestUri = new Uri($"{HttpClient.BaseAddress}Groups/RemoveFriend"),
                 Content = new StringContent(JsonConvert.SerializeObject(model), Encoding.UTF8, MediaTypeNames.Application.Json),
             };
             var response = await HttpClient.SendAsync(request).ConfigureAwait(false);

@@ -20,6 +20,32 @@ namespace SmartHome.API.Controllers
             return Ok(_thingsService.GetAll());
         }
 
+        [HttpGet("ScanThings")]
+        public ActionResult<IEnumerable<ThingViewModel>> ScanThings()
+        {
+            var result = new List<ThingViewModel>()
+            { new ThingViewModel()
+            {
+                title="LightBuld",
+                description="A great lightbub",
+                validation_url="https://localhost:44310/api/Things/ActivateThing"
+            },
+            new ThingViewModel()
+            {
+                title="Lock",
+                description="A great lock",
+                validation_url="https://localhost:44310/api/Things/ActivateThing"
+            }
+            };
+            return result;
+        }
+
+        [HttpPost("ActivateThing")]
+        public ActionResult<IEnumerable<ThingViewModel>> ActivateThing([FromBody] ValueObject value)
+        {
+            return BadRequest();
+        }
+
         [HttpPost]
         public ActionResult<Thing> Post(Thing thing)
         {
@@ -38,5 +64,9 @@ namespace SmartHome.API.Controllers
             return Ok(_thingsService.GetAccesible(userId));
         }
 
+    }
+    public class ValueObject
+    {
+        public string value { get; set; }
     }
 }

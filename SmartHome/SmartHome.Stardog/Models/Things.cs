@@ -45,6 +45,7 @@ namespace SmartHome.Stardog.Models
     {
         public string title { get; set; }
         public string description { get; set; }
+        public string thingId { get; set; }
         public string validation_url { get; set; }
         public string access_code { get; set; }
     }

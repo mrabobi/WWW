@@ -76,3 +76,6 @@
 2022-02-01 22:40:18.506 +02:00 [ERR] Could not retrieve things owned by 5be36d8c-b08b-439f-a6ce-3cc7f373e854
 2022-02-01 22:40:52.666 +02:00 [ERR] Could not retrieve things owned by 5be36d8c-b08b-439f-a6ce-3cc7f373e854
 2022-02-01 22:43:16.305 +02:00 [ERR] Could not retrieve things owned by 5be36d8c-b08b-439f-a6ce-3cc7f373e854
+2022-02-02 01:10:34.856 +02:00 [ERR] Could not return things for group
+2022-02-02 01:11:58.838 +02:00 [ERR] Could not return things for group
+2022-02-02 01:17:19.774 +02:00 [ERR] Could not return things for group

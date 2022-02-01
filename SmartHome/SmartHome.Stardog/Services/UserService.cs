@@ -97,7 +97,7 @@ namespace SmartHome.Stardog.Services
                 var connector = GetStardogConnector();
                 var query = $"SELECT DISTINCT *  {{?user a foaf:Person; " +
                     $"foaf:familyName ?familyName; " +
-                    $"foaf:givenName?givenName; " +
+                    $"foaf:givenName ?givenName; " +
                     $"foaf:openid ?openid; " +
                     $"foaf:mbox ?mbox; " +
                     $"foaf:accountName ?accountName}}";

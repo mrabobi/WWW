@@ -6,5 +6,6 @@ namespace SmartHome.UI_Auth.Utils
     {
         public static UserModel CurrentUser { get; set; }
         public static string CurrentGroupId { get; set; }
+        public static string DeviceApiUrl { get; set; }
     }
 }
