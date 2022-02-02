@@ -1,0 +1,1568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="http://api.stardog.com/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:fibo="https://spec.edmcouncil.org/fibo/ontology/FND/OwnershipAndControl/Ownership/"
+	xmlns:hctl="https://www.w3.org/2019/wot/hypermedia#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:jsonschema="https://www.w3.org/2019/wot/json-schema#"
+	xmlns:td="https://www.w3.org/2019/wot/td#"
+	xmlns:stardog="tag:stardog:api:"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/5be36d8c-b08b-439f-a6ce-3cc7f373e854">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Susan</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stefan-Claudiu</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5be36d8c-b08b-439f-a6ce-3cc7f373e854</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">claudiu_susan@yahoo.com</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Claudiu</foaf:accountName>
+	<foaf:knows rdf:resource="https://localhost:44310/api/Users/8c6c3138-e041-4d4f-a6de-d1a259d0b625"/>
+	<foaf:knows rdf:resource="https://localhost:44310/api/Users/63bcf00c-79b5-44d9-9303-5ee177d0ff63"/>
+	<foaf:knows rdf:resource="https://localhost:44310/api/Users/Bobi"/>
+	<foaf:knows rdf:resource="https://localhost:44310/api/Users/03ba5689-3d18-4802-a2bf-d9450689bab5"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/8c6c3138-e041-4d4f-a6de-d1a259d0b625">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miron</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robert-Andrei</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8c6c3138-e041-4d4f-a6de-d1a259d0b625</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mraboby@gmail.com</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bobi</foaf:accountName>
+	<foaf:member rdf:resource="https://localhost:44310/api/Groups/58fda3b3-b4f9-4442-b8d8-a4c5ce6d2015"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/63bcf00c-79b5-44d9-9303-5ee177d0ff63">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chirica</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Demetra-Bianca</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">63bcf00c-79b5-44d9-9303-5ee177d0ff63</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bia_ch97@yahoo.com</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bianca</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Groups/58fda3b3-b4f9-4442-b8d8-a4c5ce6d2015">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Group"/>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">58fda3b3-b4f9-4442-b8d8-a4c5ce6d2015</foaf:openid>
+	<foaf:maker rdf:resource="https://localhost:44310/api/Users/5be36d8c-b08b-439f-a6ce-3cc7f373e854"/>
+	<foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FriendsGroup1</foaf:name>
+	<foaf:topic_interest rdf:resource="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c48"/>
+	<foaf:topic_interest rdf:resource="http://127.0.0.1:5010/LED-390fcc54-3a21-4f9c-b0c5-f43d8dafe05e"/>
+	<foaf:topic_interest rdf:resource="http://127.0.0.1:5010/Thermostat-cd2d069f-cd2d-49da-8ee9-8606ef1e280b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/99e895a0-aad2-4fea-b03f-2d9122cd445b">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu1</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux1</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">99e895a0-aad2-4fea-b03f-2d9122cd445b</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux1</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/69a711bf-4932-418e-964b-5b0f8a4a7a8b">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu2</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux2</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">69a711bf-4932-418e-964b-5b0f8a4a7a8b</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux2</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/73583fc9-9191-4122-86ee-66ac7f4b06c5">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu3</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux3</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">73583fc9-9191-4122-86ee-66ac7f4b06c5</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux3</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/dd34be5f-4358-452d-8b0e-827cdf1bed04">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu4</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux4</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dd34be5f-4358-452d-8b0e-827cdf1bed04</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux4</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/9875c16e-3dc5-426a-8c08-fe5f71f62398">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu5</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux5</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9875c16e-3dc5-426a-8c08-fe5f71f62398</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux5</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/eca59b33-c8ed-414f-923e-93f7b5efb24e">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu6</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux6</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eca59b33-c8ed-414f-923e-93f7b5efb24e</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux6</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/b2e087b5-8733-420b-ac5a-f49de0f1ac50">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu7</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux7</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">b2e087b5-8733-420b-ac5a-f49de0f1ac50</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux7</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/2e58e25f-9eb1-4543-a50c-af51e55df916">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu8</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux8</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2e58e25f-9eb1-4543-a50c-af51e55df916</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux8</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/c12c105d-bdea-4e52-add1-1008b17dd741">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu9</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux9</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c12c105d-bdea-4e52-add1-1008b17dd741</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux9</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/c4180ecf-248b-4ca9-a419-6f7cfd024a80">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu10</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux10</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c4180ecf-248b-4ca9-a419-6f7cfd024a80</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux10</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/3cfb44ec-6817-40b7-9437-9ab34b029b4f">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu11</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux11</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3cfb44ec-6817-40b7-9437-9ab34b029b4f</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux11</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/e5a15f08-c567-418e-b2d9-9bdf4edcdc99">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu12</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux12</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">e5a15f08-c567-418e-b2d9-9bdf4edcdc99</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux12</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/69f6fe2c-02bd-46c9-ab8a-fdb319f22444">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu13</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux13</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">69f6fe2c-02bd-46c9-ab8a-fdb319f22444</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux13</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/2eb5075b-5a01-4d22-906f-a628d2869c7d">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu14</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux14</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2eb5075b-5a01-4d22-906f-a628d2869c7d</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux14</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/1dc95427-10f1-4cb9-9033-dae12deb0290">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu15</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux15</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1dc95427-10f1-4cb9-9033-dae12deb0290</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux15</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/53efe9af-974e-4ae4-b4bc-c51f617c0598">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu16</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux16</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">53efe9af-974e-4ae4-b4bc-c51f617c0598</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux16</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/dc157351-0d8c-41e6-9041-6b5986471ddb">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu17</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux17</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dc157351-0d8c-41e6-9041-6b5986471ddb</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux17</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/8ad83bfc-b329-4243-9b79-04237487b412">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu18</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux18</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8ad83bfc-b329-4243-9b79-04237487b412</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux18</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/a3e776a2-c75f-431d-8b1e-a83a935e19cd">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu19</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux19</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a3e776a2-c75f-431d-8b1e-a83a935e19cd</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux19</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/a2fac31c-5142-436e-ba38-ba48d02b8e9d">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu20</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux20</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a2fac31c-5142-436e-ba38-ba48d02b8e9d</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux20</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/aeb449c5-fbe3-4cbe-9ef3-f653a9840e42">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu21</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux21</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aeb449c5-fbe3-4cbe-9ef3-f653a9840e42</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux21</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/b56dcadf-aa5f-4dec-ba6a-354772cae4ac">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu22</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux22</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">b56dcadf-aa5f-4dec-ba6a-354772cae4ac</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux22</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/e3279cee-9f34-4b44-aa93-be4fa592bb91">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu23</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux23</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">e3279cee-9f34-4b44-aa93-be4fa592bb91</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux23</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/5c887db0-07cf-4cd5-bedb-40a84bdbb6e8">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu24</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux24</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5c887db0-07cf-4cd5-bedb-40a84bdbb6e8</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux24</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/c3638470-43cb-4584-977d-ef2580b535eb">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu25</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux25</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c3638470-43cb-4584-977d-ef2580b535eb</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux25</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/2d67d534-3f45-4eff-91dd-ca5626c38fea">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu26</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux26</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2d67d534-3f45-4eff-91dd-ca5626c38fea</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux26</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/fbb4e641-650a-4e48-94d4-8eb353df7144">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu27</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux27</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fbb4e641-650a-4e48-94d4-8eb353df7144</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux27</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/c7edb625-e53e-4a4b-b515-4d7725f96d5c">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu28</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux28</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c7edb625-e53e-4a4b-b515-4d7725f96d5c</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux28</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/98617e98-1487-4500-b8a9-ba749cf380ba">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu29</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux29</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">98617e98-1487-4500-b8a9-ba749cf380ba</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux29</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/f3c07142-97e4-48fd-9cff-ec10b67e1f5a">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu30</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux30</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">f3c07142-97e4-48fd-9cff-ec10b67e1f5a</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux30</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/218d2923-175e-4a9c-8226-38d4b91c7987">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu31</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux31</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">218d2923-175e-4a9c-8226-38d4b91c7987</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux31</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/d100eb1d-0101-47ea-a4a2-755e4a1d5668">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu32</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux32</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">d100eb1d-0101-47ea-a4a2-755e4a1d5668</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux32</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/8d849bf3-77ae-459c-a310-f949b83d0764">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu33</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux33</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8d849bf3-77ae-459c-a310-f949b83d0764</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux33</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/eb2a1c63-899d-4d8e-9a4c-8263edacf666">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu34</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux34</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eb2a1c63-899d-4d8e-9a4c-8263edacf666</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux34</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/83311258-11a0-441c-aab7-91e57f875fc0">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu35</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux35</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">83311258-11a0-441c-aab7-91e57f875fc0</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux35</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/ec249691-5336-46b7-8f6b-2fbd1498e6d1">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu36</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux36</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ec249691-5336-46b7-8f6b-2fbd1498e6d1</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux36</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/7e06c190-f432-4fc8-9612-e9242d64f593">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu37</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux37</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7e06c190-f432-4fc8-9612-e9242d64f593</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux37</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/fef5b755-b92f-481d-b5f3-ae075c007e9f">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu38</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux38</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fef5b755-b92f-481d-b5f3-ae075c007e9f</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux38</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/fd82c62e-3109-4583-a198-3a6ba62f4c93">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu39</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux39</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fd82c62e-3109-4583-a198-3a6ba62f4c93</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux39</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/cb3587af-f75e-4763-99d8-3abcc289c94b">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu40</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux40</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cb3587af-f75e-4763-99d8-3abcc289c94b</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux40</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/0cf41e57-ae26-46fd-bc8e-fbbcfbbef03e">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu41</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux41</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0cf41e57-ae26-46fd-bc8e-fbbcfbbef03e</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux41</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/35ccad3f-ded8-454a-92e6-3ea572c74780">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu42</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux42</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">35ccad3f-ded8-454a-92e6-3ea572c74780</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux42</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/90ebdeb9-f3e3-43e4-b906-d4f2e7215a03">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu43</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux43</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">90ebdeb9-f3e3-43e4-b906-d4f2e7215a03</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux43</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/ec0849b5-30e4-40e0-ac74-c2a1d6fa50f0">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu44</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux44</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ec0849b5-30e4-40e0-ac74-c2a1d6fa50f0</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux44</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/d14a9a25-f529-4951-80ec-a6ecbbd2d7f2">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu45</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux45</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">d14a9a25-f529-4951-80ec-a6ecbbd2d7f2</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux45</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/4fefcf4f-f5ad-46f1-878e-80c8608215f8">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu46</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux46</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4fefcf4f-f5ad-46f1-878e-80c8608215f8</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux46</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/781b70da-231a-4a60-8abf-4294dc2ff183">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu47</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux47</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">781b70da-231a-4a60-8abf-4294dc2ff183</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux47</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/ee56b113-1f00-48b0-af7a-bdd1735cda80">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu48</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux48</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ee56b113-1f00-48b0-af7a-bdd1735cda80</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux48</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/beef6ef7-389a-4557-91ed-c51a6ac7336e">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu49</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux49</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">beef6ef7-389a-4557-91ed-c51a6ac7336e</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux49</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/1a72054f-6827-44b7-a62d-0c0b4670c356">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu50</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux50</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1a72054f-6827-44b7-a62d-0c0b4670c356</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux50</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/f2651307-a1b2-45ce-ad94-13b455af142e">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu51</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux51</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">f2651307-a1b2-45ce-ad94-13b455af142e</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux51</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/7456cc26-7847-4538-abdd-15c7a1482145">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu52</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux52</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7456cc26-7847-4538-abdd-15c7a1482145</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux52</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/d013df6b-a92f-431b-b3b9-aa1de708accc">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu53</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux53</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">d013df6b-a92f-431b-b3b9-aa1de708accc</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux53</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/a25b0d03-ccf7-423b-a91a-0a34cb86a7cf">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu54</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux54</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a25b0d03-ccf7-423b-a91a-0a34cb86a7cf</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux54</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/53de7b57-d46b-4223-9c31-8a62ea369602">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu55</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux55</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">53de7b57-d46b-4223-9c31-8a62ea369602</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux55</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/270e9566-9ea3-4818-9bf8-e48e2dca9410">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu56</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux56</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">270e9566-9ea3-4818-9bf8-e48e2dca9410</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux56</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/c4394e18-0037-4853-9e2b-3671a26be1cd">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu57</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux57</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c4394e18-0037-4853-9e2b-3671a26be1cd</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux57</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/f99b6a76-1e83-4083-97cc-210fb3c38a98">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu58</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux58</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">f99b6a76-1e83-4083-97cc-210fb3c38a98</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux58</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/9930f74c-5017-4eec-af5d-4b94a4c290af">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu59</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux59</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9930f74c-5017-4eec-af5d-4b94a4c290af</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux59</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/b960924b-1a10-4159-8a36-95344c3d2982">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu60</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux60</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">b960924b-1a10-4159-8a36-95344c3d2982</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux60</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/bb766019-f779-4990-a2f2-436764d7b7ae">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu61</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux61</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bb766019-f779-4990-a2f2-436764d7b7ae</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux61</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/de343ff3-0bab-40a5-a5f0-78a581e2c16a">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu62</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux62</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">de343ff3-0bab-40a5-a5f0-78a581e2c16a</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux62</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/023429a4-fe57-4a76-8bbe-a85aa386ed7b">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu63</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux63</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">023429a4-fe57-4a76-8bbe-a85aa386ed7b</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux63</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/6a097e81-7b52-4efe-ac75-8ef9328683b3">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu64</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux64</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6a097e81-7b52-4efe-ac75-8ef9328683b3</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux64</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/e4716db2-66ef-4336-b203-2db8e8b28304">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu65</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux65</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">e4716db2-66ef-4336-b203-2db8e8b28304</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux65</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/ee3cf04a-9702-4b1b-95b5-0b586b1b9054">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu66</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux66</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ee3cf04a-9702-4b1b-95b5-0b586b1b9054</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux66</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/6665924b-e3c5-4870-ab18-001e7fac4a55">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu67</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux67</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6665924b-e3c5-4870-ab18-001e7fac4a55</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux67</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/07dbfe66-4781-478c-bdbb-9f77e68e376a">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu68</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux68</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">07dbfe66-4781-478c-bdbb-9f77e68e376a</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux68</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/32fd45dc-02ba-41f4-b252-760036e6ece0">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu69</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux69</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32fd45dc-02ba-41f4-b252-760036e6ece0</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux69</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/5bd5aed7-7b37-4dd9-8df1-541cb5a1b7d8">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu70</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux70</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5bd5aed7-7b37-4dd9-8df1-541cb5a1b7d8</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux70</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/5db63108-5280-4589-8a57-350f9260184a">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu71</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux71</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5db63108-5280-4589-8a57-350f9260184a</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux71</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/0296b69a-fe69-479b-ac6c-e467aa034cf2">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu72</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux72</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0296b69a-fe69-479b-ac6c-e467aa034cf2</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux72</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/d60a7c8f-fb50-4933-bb87-2eadfbf22712">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu73</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux73</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">d60a7c8f-fb50-4933-bb87-2eadfbf22712</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux73</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/dd3917a0-bc13-4007-acbb-a1497ac62439">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu74</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux74</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dd3917a0-bc13-4007-acbb-a1497ac62439</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux74</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/35788d2d-2e4d-41fd-a9e9-4a97f713948d">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu75</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux75</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">35788d2d-2e4d-41fd-a9e9-4a97f713948d</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux75</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/5d289537-bbec-49b8-b77c-d0a92a00ab7a">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu76</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux76</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5d289537-bbec-49b8-b77c-d0a92a00ab7a</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux76</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/549602cc-47af-4807-9e1e-c0a3f327202e">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu77</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux77</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">549602cc-47af-4807-9e1e-c0a3f327202e</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux77</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/df10abb0-be62-4042-8d60-3c71f062db81">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu78</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux78</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">df10abb0-be62-4042-8d60-3c71f062db81</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux78</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/67e90ac6-3673-4e1d-9083-2890d2747ad3">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu79</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux79</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">67e90ac6-3673-4e1d-9083-2890d2747ad3</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux79</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/e91e974c-4c8b-4897-94a3-e4bbd6ea97d4">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu80</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux80</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">e91e974c-4c8b-4897-94a3-e4bbd6ea97d4</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux80</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/e56e9879-d72e-434a-bef2-ca14bf41b38b">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu81</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux81</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">e56e9879-d72e-434a-bef2-ca14bf41b38b</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux81</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/7d17111a-950c-4eac-a104-ba9404fc6410">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu82</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux82</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7d17111a-950c-4eac-a104-ba9404fc6410</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux82</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/45e6351e-aa95-4db1-8814-b5bcfbe3f99c">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu83</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux83</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">45e6351e-aa95-4db1-8814-b5bcfbe3f99c</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux83</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/e2597ba1-4f7f-4b57-99d6-fe50c106a11f">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu84</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux84</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">e2597ba1-4f7f-4b57-99d6-fe50c106a11f</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux84</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/3d173c80-2f6e-4f15-a3a0-2351e973af2d">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu85</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux85</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3d173c80-2f6e-4f15-a3a0-2351e973af2d</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux85</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/1bf4b89f-b7e5-4e99-b261-e368a49fe8dd">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu86</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux86</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1bf4b89f-b7e5-4e99-b261-e368a49fe8dd</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux86</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/ffa10234-ac8f-41bf-9b3b-2d2251bb11c3">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu87</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux87</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ffa10234-ac8f-41bf-9b3b-2d2251bb11c3</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux87</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/59a5e96d-d2dc-4204-8803-a281478a6057">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu88</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux88</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">59a5e96d-d2dc-4204-8803-a281478a6057</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux88</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/03ba5689-3d18-4802-a2bf-d9450689bab5">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu89</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux89</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">03ba5689-3d18-4802-a2bf-d9450689bab5</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux89</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/dfa0b0d1-3a95-476f-ba43-c8295c83ad17">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu90</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux90</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dfa0b0d1-3a95-476f-ba43-c8295c83ad17</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux90</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/72293f8e-f795-49f1-82b8-31cae80c6737">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu91</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux91</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">72293f8e-f795-49f1-82b8-31cae80c6737</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux91</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/e98d2cb0-f4a0-40d6-8921-840589bc1e70">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu92</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux92</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">e98d2cb0-f4a0-40d6-8921-840589bc1e70</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux92</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/7923bb59-1668-4ed3-914d-050398480a03">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu93</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux93</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7923bb59-1668-4ed3-914d-050398480a03</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux93</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/5b10549f-672b-4db7-b25d-ca8aaac8ea72">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu94</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux94</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5b10549f-672b-4db7-b25d-ca8aaac8ea72</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux94</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/13e4c9e6-4a70-463f-833a-d82ea060cc22">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu95</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux95</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13e4c9e6-4a70-463f-833a-d82ea060cc22</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux95</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/bf01bd05-83b1-4653-8061-fde652e8a8e4">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu96</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux96</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bf01bd05-83b1-4653-8061-fde652e8a8e4</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux96</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/ccd5f8b3-8032-4938-8967-aee6745f67f8">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu97</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux97</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ccd5f8b3-8032-4938-8967-aee6745f67f8</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux97</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/f96dd20f-f74d-4a64-b65f-5e80930a167a">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu98</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux98</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">f96dd20f-f74d-4a64-b65f-5e80930a167a</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux98</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/31e2ec06-6a58-4011-954a-2a21b09f6883">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu99</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux99</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31e2ec06-6a58-4011-954a-2a21b09f6883</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux99</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://localhost:44310/api/Users/4461bad9-8504-4dd4-b98b-e8762076ab13">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinguinescu100</foaf:familyName>
+	<foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux100</foaf:givenName>
+	<foaf:openid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4461bad9-8504-4dd4-b98b-e8762076ab13</foaf:openid>
+	<foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tux_ping@uaic.ro</foaf:mbox>
+	<foaf:accountName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tux100</foaf:accountName>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://mylamp.example.com">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#Thing"/>
+	<fibo:owner rdf:resource="https://localhost:44310/api/Users/5be36d8c-b08b-439f-a6ce-3cc7f373e854"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lamp</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A very good lamp</td:description>
+	<td:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1123</td:id>
+	<td:hasPropertyAffordance rdf:resource="https://mylamp.example.com/Ligh"/>
+	<td:hasActionAffordance rdf:resource="https://mylamp.example.com/action1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://mylamp.example.com/Ligh">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#PropertyAffordance"/>
+	<rdf:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">boolean</rdf:type>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light on or off</td:description>
+	<td:readProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">True</td:readProperty>
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10</jsonschema:maximum>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://mylamp.example.com/action1">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#ActionAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">action1 title</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">action1 description</td:description>
+	<td:uriVariables rdf:resource="https://mylamp.example.com/action1/p1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://mylamp.example.com/action1/p1">
+	<rdf:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</rdf:type>
+	<td:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p1</td:name>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c39">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#Thing"/>
+	<fibo:owner rdf:resource="https://localhost:44310/api/Users/"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thermostat</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An intelligent thermostat</td:description>
+	<td:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c39</td:id>
+	<td:hasPropertyAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c39/currentTemperature"/>
+	<td:hasPropertyAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c39/minimumTemperature"/>
+	<td:hasPropertyAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c39/status"/>
+	<td:hasActionAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c39/turnOnHeating"/>
+	<td:hasActionAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c39/suggestTemperature"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c39/currentTemperature">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#PropertyAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">currentTemperature</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The current temperature in the room.</td:description>
+	<td:readProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</td:readProperty>
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100</jsonschema:maximum>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</hctl:hasOperationType>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c39/minimumTemperature">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#PropertyAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">minimumTemperature</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The minimum temperature required for the heating to start.</td:description>
+	<td:readProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</td:readProperty>
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100</jsonschema:maximum>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</hctl:hasOperationType>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c39/status">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#PropertyAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">status</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turn the thermostat On/Off.</td:description>
+	<td:readProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</td:readProperty>
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</jsonschema:maximum>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">boolean</hctl:hasOperationType>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c39/turnOnHeating">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#ActionAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">turnOnHeating</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turn on heating for a number of minutes</td:description>
+	<td:uriVariables rdf:resource="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c39/turnOnHeating/duration"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c39/turnOnHeating/duration">
+	<td:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">duration</td:name>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</hctl:hasOperationType>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c39/suggestTemperature">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#ActionAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">suggestTemperature</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suggests the ideal temperature based on the outside temperature.</td:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c40">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#Thing"/>
+	<fibo:owner rdf:resource="https://localhost:44310/api/Users/"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thermostat</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An intelligent thermostat</td:description>
+	<td:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c40</td:id>
+	<td:hasPropertyAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c40/currentTemperature"/>
+	<td:hasPropertyAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c40/minimumTemperature"/>
+	<td:hasPropertyAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c40/status"/>
+	<td:hasActionAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c40/turnOnHeating"/>
+	<td:hasActionAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c40/suggestTemperature"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c40/currentTemperature">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#PropertyAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">currentTemperature</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The current temperature in the room.</td:description>
+	<td:readProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</td:readProperty>
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100</jsonschema:maximum>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</hctl:hasOperationType>
+	<jsonschema:readOnly rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</jsonschema:readOnly>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c40/minimumTemperature">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#PropertyAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">minimumTemperature</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The minimum temperature required for the heating to start.</td:description>
+	<td:readProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</td:readProperty>
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100</jsonschema:maximum>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</hctl:hasOperationType>
+	<jsonschema:readOnly rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</jsonschema:readOnly>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c40/status">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#PropertyAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">status</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turn the thermostat On/Off.</td:description>
+	<td:readProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</td:readProperty>
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</jsonschema:maximum>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">boolean</hctl:hasOperationType>
+	<jsonschema:readOnly rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</jsonschema:readOnly>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c40/turnOnHeating">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#ActionAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">turnOnHeating</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turn on heating for a number of minutes</td:description>
+	<td:uriVariables rdf:resource="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c40/turnOnHeating/duration"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c40/turnOnHeating/duration">
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">180</jsonschema:maximum>
+	<td:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">duration</td:name>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</hctl:hasOperationType>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c40/suggestTemperature">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#ActionAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">suggestTemperature</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suggests the ideal temperature based on the outside temperature.</td:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c44">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#Thing"/>
+	<fibo:owner rdf:resource="https://localhost:44310/api/Users/"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thermostat</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An intelligent thermostat</td:description>
+	<td:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c44</td:id>
+	<td:hasPropertyAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c44/currentTemperature"/>
+	<td:hasPropertyAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c44/minimumTemperature"/>
+	<td:hasPropertyAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c44/status"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c44/currentTemperature">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#PropertyAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">currentTemperature</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The current temperature in the room.</td:description>
+	<td:readProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</td:readProperty>
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100</jsonschema:maximum>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</hctl:hasOperationType>
+	<jsonschema:readOnly rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</jsonschema:readOnly>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c44/minimumTemperature">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#PropertyAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">minimumTemperature</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The minimum temperature required for the heating to start.</td:description>
+	<td:readProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</td:readProperty>
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100</jsonschema:maximum>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</hctl:hasOperationType>
+	<jsonschema:readOnly rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</jsonschema:readOnly>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c44/status">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#PropertyAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">status</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turn the thermostat On/Off.</td:description>
+	<td:readProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</td:readProperty>
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</jsonschema:maximum>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">boolean</hctl:hasOperationType>
+	<jsonschema:readOnly rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</jsonschema:readOnly>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c46">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#Thing"/>
+	<fibo:owner rdf:resource="https://localhost:44310/api/Users/"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thermostat</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An intelligent thermostat</td:description>
+	<td:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c46</td:id>
+	<td:hasPropertyAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c46/currentTemperature"/>
+	<td:hasPropertyAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c46/minimumTemperature"/>
+	<td:hasPropertyAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c46/status"/>
+	<td:hasActionAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c46/turnOnHeating"/>
+	<td:hasActionAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c46/suggestTemperature"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c46/currentTemperature">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#PropertyAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">currentTemperature</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The current temperature in the room.</td:description>
+	<td:readProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</td:readProperty>
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100</jsonschema:maximum>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</hctl:hasOperationType>
+	<jsonschema:readOnly rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</jsonschema:readOnly>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c46/minimumTemperature">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#PropertyAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">minimumTemperature</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The minimum temperature required for the heating to start.</td:description>
+	<td:readProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</td:readProperty>
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100</jsonschema:maximum>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</hctl:hasOperationType>
+	<jsonschema:readOnly rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</jsonschema:readOnly>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c46/status">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#PropertyAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">status</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turn the thermostat On/Off.</td:description>
+	<td:readProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</td:readProperty>
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</jsonschema:maximum>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">boolean</hctl:hasOperationType>
+	<jsonschema:readOnly rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</jsonschema:readOnly>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c46/turnOnHeating">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#ActionAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">turnOnHeating</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turn on heating for a number of minutes</td:description>
+	<td:uriVariables rdf:resource="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c46/turnOnHeating/duration"/>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">void</hctl:hasOperationType>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c46/turnOnHeating/duration">
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">180</jsonschema:maximum>
+	<td:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">duration</td:name>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</hctl:hasOperationType>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c46/suggestTemperature">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#ActionAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">suggestTemperature</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suggests the ideal temperature based on the outside temperature.</td:description>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</hctl:hasOperationType>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c48">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#Thing"/>
+	<fibo:owner rdf:resource="https://localhost:44310/api/Users/5be36d8c-b08b-439f-a6ce-3cc7f373e854"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thermostat</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An intelligent thermostat</td:description>
+	<td:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c48</td:id>
+	<td:hasPropertyAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c48/currentTemperature"/>
+	<td:hasPropertyAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c48/minimumTemperature"/>
+	<td:hasPropertyAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c48/status"/>
+	<td:hasActionAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c48/turnOnHeating"/>
+	<td:hasActionAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c48/suggestTemperature"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c48/currentTemperature">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#PropertyAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">currentTemperature</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The current temperature in the room.</td:description>
+	<td:readProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</td:readProperty>
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100</jsonschema:maximum>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</hctl:hasOperationType>
+	<jsonschema:readOnly rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</jsonschema:readOnly>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c48/minimumTemperature">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#PropertyAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">minimumTemperature</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The minimum temperature required for the heating to start.</td:description>
+	<td:readProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</td:readProperty>
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100</jsonschema:maximum>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</hctl:hasOperationType>
+	<jsonschema:readOnly rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</jsonschema:readOnly>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c48/status">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#PropertyAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">status</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turn the thermostat On/Off.</td:description>
+	<td:readProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</td:readProperty>
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</jsonschema:maximum>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">boolean</hctl:hasOperationType>
+	<jsonschema:readOnly rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</jsonschema:readOnly>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c48/turnOnHeating">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#ActionAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">turnOnHeating</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turn on heating for a number of minutes</td:description>
+	<td:uriVariables rdf:resource="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c48/turnOnHeating/duration"/>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">void</hctl:hasOperationType>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c48/turnOnHeating/duration">
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">180</jsonschema:maximum>
+	<td:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">duration</td:name>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</hctl:hasOperationType>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-f80ceba6-80ea-4c21-8e4a-e4074c9f2c48/suggestTemperature">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#ActionAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">suggestTemperature</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suggests the ideal temperature based on the outside temperature.</td:description>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</hctl:hasOperationType>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/LED-390fcc54-3a21-4f9c-b0c5-f43d8dafe05e">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#Thing"/>
+	<fibo:owner rdf:resource="https://localhost:44310/api/Users/5be36d8c-b08b-439f-a6ce-3cc7f373e854"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LED</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An intelligent led</td:description>
+	<td:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LED-390fcc54-3a21-4f9c-b0c5-f43d8dafe05e</td:id>
+	<td:hasPropertyAffordance rdf:resource="http://127.0.0.1:5010/LED-390fcc54-3a21-4f9c-b0c5-f43d8dafe05e/brightness"/>
+	<td:hasPropertyAffordance rdf:resource="http://127.0.0.1:5010/LED-390fcc54-3a21-4f9c-b0c5-f43d8dafe05e/status"/>
+	<td:hasActionAffordance rdf:resource="http://127.0.0.1:5010/LED-390fcc54-3a21-4f9c-b0c5-f43d8dafe05e/fade"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/LED-390fcc54-3a21-4f9c-b0c5-f43d8dafe05e/brightness">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#PropertyAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">brightness</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The brightness level of the led</td:description>
+	<td:readProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</td:readProperty>
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100</jsonschema:maximum>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</hctl:hasOperationType>
+	<jsonschema:readOnly rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</jsonschema:readOnly>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/LED-390fcc54-3a21-4f9c-b0c5-f43d8dafe05e/status">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#PropertyAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">status</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turn On/Off LED</td:description>
+	<td:readProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</td:readProperty>
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</jsonschema:maximum>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">boolean</hctl:hasOperationType>
+	<jsonschema:readOnly rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</jsonschema:readOnly>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/LED-390fcc54-3a21-4f9c-b0c5-f43d8dafe05e/fade">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#ActionAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fade</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dims the light</td:description>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">void</hctl:hasOperationType>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-cd2d069f-cd2d-49da-8ee9-8606ef1e280b">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#Thing"/>
+	<fibo:owner rdf:resource="https://localhost:44310/api/Users/5be36d8c-b08b-439f-a6ce-3cc7f373e854"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thermostat</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An intelligent thermostat</td:description>
+	<td:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thermostat-cd2d069f-cd2d-49da-8ee9-8606ef1e280b</td:id>
+	<td:hasPropertyAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-cd2d069f-cd2d-49da-8ee9-8606ef1e280b/currentTemperature"/>
+	<td:hasPropertyAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-cd2d069f-cd2d-49da-8ee9-8606ef1e280b/minimumTemperature"/>
+	<td:hasPropertyAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-cd2d069f-cd2d-49da-8ee9-8606ef1e280b/status"/>
+	<td:hasActionAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-cd2d069f-cd2d-49da-8ee9-8606ef1e280b/turnOnHeating"/>
+	<td:hasActionAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-cd2d069f-cd2d-49da-8ee9-8606ef1e280b/suggestTemperature"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-cd2d069f-cd2d-49da-8ee9-8606ef1e280b/currentTemperature">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#PropertyAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">currentTemperature</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The current temperature in the room.</td:description>
+	<td:readProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</td:readProperty>
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100</jsonschema:maximum>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</hctl:hasOperationType>
+	<jsonschema:readOnly rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</jsonschema:readOnly>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-cd2d069f-cd2d-49da-8ee9-8606ef1e280b/minimumTemperature">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#PropertyAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">minimumTemperature</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The minimum temperature required for the heating to start.</td:description>
+	<td:readProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</td:readProperty>
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100</jsonschema:maximum>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</hctl:hasOperationType>
+	<jsonschema:readOnly rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</jsonschema:readOnly>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-cd2d069f-cd2d-49da-8ee9-8606ef1e280b/status">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#PropertyAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">status</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turn the thermostat On/Off.</td:description>
+	<td:readProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</td:readProperty>
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</jsonschema:maximum>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">boolean</hctl:hasOperationType>
+	<jsonschema:readOnly rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</jsonschema:readOnly>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-cd2d069f-cd2d-49da-8ee9-8606ef1e280b/turnOnHeating">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#ActionAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">turnOnHeating</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turn on heating for a number of minutes</td:description>
+	<td:uriVariables rdf:resource="http://127.0.0.1:5010/Thermostat-cd2d069f-cd2d-49da-8ee9-8606ef1e280b/turnOnHeating/duration"/>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">void</hctl:hasOperationType>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-cd2d069f-cd2d-49da-8ee9-8606ef1e280b/turnOnHeating/duration">
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">180</jsonschema:maximum>
+	<td:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">duration</td:name>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</hctl:hasOperationType>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-cd2d069f-cd2d-49da-8ee9-8606ef1e280b/suggestTemperature">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#ActionAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">suggestTemperature</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suggests the ideal temperature based on the outside temperature.</td:description>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</hctl:hasOperationType>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-9e7ea1e5-0666-498f-85ed-8b8439d2f202">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#Thing"/>
+	<fibo:owner rdf:resource="https://localhost:44310/api/Users/5be36d8c-b08b-439f-a6ce-3cc7f373e854"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thermostat</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An intelligent thermostat</td:description>
+	<td:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thermostat-9e7ea1e5-0666-498f-85ed-8b8439d2f202</td:id>
+	<td:hasPropertyAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-9e7ea1e5-0666-498f-85ed-8b8439d2f202/currentTemperature"/>
+	<td:hasPropertyAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-9e7ea1e5-0666-498f-85ed-8b8439d2f202/minimumTemperature"/>
+	<td:hasPropertyAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-9e7ea1e5-0666-498f-85ed-8b8439d2f202/status"/>
+	<td:hasActionAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-9e7ea1e5-0666-498f-85ed-8b8439d2f202/turnOnHeating"/>
+	<td:hasActionAffordance rdf:resource="http://127.0.0.1:5010/Thermostat-9e7ea1e5-0666-498f-85ed-8b8439d2f202/suggestTemperature"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-9e7ea1e5-0666-498f-85ed-8b8439d2f202/currentTemperature">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#PropertyAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">currentTemperature</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The current temperature in the room.</td:description>
+	<td:readProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</td:readProperty>
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100</jsonschema:maximum>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</hctl:hasOperationType>
+	<jsonschema:readOnly rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</jsonschema:readOnly>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-9e7ea1e5-0666-498f-85ed-8b8439d2f202/minimumTemperature">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#PropertyAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">minimumTemperature</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The minimum temperature required for the heating to start.</td:description>
+	<td:readProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</td:readProperty>
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100</jsonschema:maximum>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</hctl:hasOperationType>
+	<jsonschema:readOnly rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</jsonschema:readOnly>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-9e7ea1e5-0666-498f-85ed-8b8439d2f202/status">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#PropertyAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">status</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turn the thermostat On/Off.</td:description>
+	<td:readProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</td:readProperty>
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</jsonschema:maximum>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">boolean</hctl:hasOperationType>
+	<jsonschema:readOnly rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</jsonschema:readOnly>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-9e7ea1e5-0666-498f-85ed-8b8439d2f202/turnOnHeating">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#ActionAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">turnOnHeating</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turn on heating for a number of minutes</td:description>
+	<td:uriVariables rdf:resource="http://127.0.0.1:5010/Thermostat-9e7ea1e5-0666-498f-85ed-8b8439d2f202/turnOnHeating/duration"/>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">void</hctl:hasOperationType>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-9e7ea1e5-0666-498f-85ed-8b8439d2f202/turnOnHeating/duration">
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">180</jsonschema:maximum>
+	<td:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">duration</td:name>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</hctl:hasOperationType>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Thermostat-9e7ea1e5-0666-498f-85ed-8b8439d2f202/suggestTemperature">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#ActionAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">suggestTemperature</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suggests the ideal temperature based on the outside temperature.</td:description>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</hctl:hasOperationType>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Lock-85d7c6f4-ee67-4320-820d-8a9e599e6673">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#Thing"/>
+	<fibo:owner rdf:resource="https://localhost:44310/api/Users/5be36d8c-b08b-439f-a6ce-3cc7f373e854"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lock</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An intelligent lock</td:description>
+	<td:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lock-85d7c6f4-ee67-4320-820d-8a9e599e6673</td:id>
+	<td:hasPropertyAffordance rdf:resource="http://127.0.0.1:5010/Lock-85d7c6f4-ee67-4320-820d-8a9e599e6673/status"/>
+	<td:hasPropertyAffordance rdf:resource="http://127.0.0.1:5010/Lock-85d7c6f4-ee67-4320-820d-8a9e599e6673/roomName"/>
+	<td:hasActionAffordance rdf:resource="http://127.0.0.1:5010/Lock-85d7c6f4-ee67-4320-820d-8a9e599e6673/isSomeoneInside"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Lock-85d7c6f4-ee67-4320-820d-8a9e599e6673/status">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#PropertyAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">status</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turn the lock On/Off.</td:description>
+	<td:readProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</td:readProperty>
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</jsonschema:maximum>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">boolean</hctl:hasOperationType>
+	<jsonschema:readOnly rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</jsonschema:readOnly>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Lock-85d7c6f4-ee67-4320-820d-8a9e599e6673/roomName">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#PropertyAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">roomName</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The name of the room where the lock is placed.</td:description>
+	<td:readProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</td:readProperty>
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100</jsonschema:maximum>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</hctl:hasOperationType>
+	<jsonschema:readOnly rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</jsonschema:readOnly>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Lock-85d7c6f4-ee67-4320-820d-8a9e599e6673/isSomeoneInside">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#ActionAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isSomeoneInside</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tells if there are people in the room.</td:description>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">boolean</hctl:hasOperationType>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Lock-a7c076a5-55b0-4e88-8cbb-49e74166ddb5">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#Thing"/>
+	<fibo:owner rdf:resource="https://localhost:44310/api/Users/5be36d8c-b08b-439f-a6ce-3cc7f373e854"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lock</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An intelligent lock</td:description>
+	<td:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lock-a7c076a5-55b0-4e88-8cbb-49e74166ddb5</td:id>
+	<td:hasPropertyAffordance rdf:resource="http://127.0.0.1:5010/Lock-a7c076a5-55b0-4e88-8cbb-49e74166ddb5/status"/>
+	<td:hasPropertyAffordance rdf:resource="http://127.0.0.1:5010/Lock-a7c076a5-55b0-4e88-8cbb-49e74166ddb5/roomName"/>
+	<td:hasActionAffordance rdf:resource="http://127.0.0.1:5010/Lock-a7c076a5-55b0-4e88-8cbb-49e74166ddb5/isSomeoneInside"/>
+	<td:hasActionAffordance rdf:resource="http://127.0.0.1:5010/Lock-a7c076a5-55b0-4e88-8cbb-49e74166ddb5/unlockForSeconds"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Lock-a7c076a5-55b0-4e88-8cbb-49e74166ddb5/status">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#PropertyAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">status</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turn the lock On/Off.</td:description>
+	<td:readProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</td:readProperty>
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</jsonschema:maximum>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">boolean</hctl:hasOperationType>
+	<jsonschema:readOnly rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</jsonschema:readOnly>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Lock-a7c076a5-55b0-4e88-8cbb-49e74166ddb5/roomName">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#PropertyAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">roomName</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The name of the room where the lock is placed.</td:description>
+	<td:readProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</td:readProperty>
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100</jsonschema:maximum>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</hctl:hasOperationType>
+	<jsonschema:readOnly rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</jsonschema:readOnly>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Lock-a7c076a5-55b0-4e88-8cbb-49e74166ddb5/isSomeoneInside">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#ActionAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isSomeoneInside</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tells if there are people in the room.</td:description>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">boolean</hctl:hasOperationType>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Lock-a7c076a5-55b0-4e88-8cbb-49e74166ddb5/unlockForSeconds">
+	<rdf:type rdf:resource="https://www.w3.org/2019/wot/td#ActionAffordance"/>
+	<td:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unlockForSeconds</td:title>
+	<td:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unlock the room for x seconds.</td:description>
+	<td:uriVariables rdf:resource="http://127.0.0.1:5010/Lock-a7c076a5-55b0-4e88-8cbb-49e74166ddb5/unlockForSeconds/duration"/>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">void</hctl:hasOperationType>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://127.0.0.1:5010/Lock-a7c076a5-55b0-4e88-8cbb-49e74166ddb5/unlockForSeconds/duration">
+	<jsonschema:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15</jsonschema:minimum>
+	<jsonschema:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">180</jsonschema:maximum>
+	<td:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">duration</td:name>
+	<hctl:hasOperationType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</hctl:hasOperationType>
+</rdf:Description>
+
+</rdf:RDF>
