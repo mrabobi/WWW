@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+      <title>Smart Home</title>
+   </head>
+   <body prefix="schema: http://schema.org" style="margin: 3em;">
+      <header>
+           <p>
+	     <figure typeof="sa:Image">
+               <img style="display: block; margin-left: auto; margin-right: auto;" src="https://i.imgur.com/eUNQi6o.png" alt="" />
+               <figcaption> </figcaption>
+          </figure>
+	    </p>
+      </header>
+
+      <section id="introduction" role="doc-abstract">
+         <h2>Introduction</h2>
+         <p>&nbsp; &nbsp; &nbsp; The SmartHome application was created with the purpose of helping the smart devices owners manage and control them in an easy and user-friendly way. The owner can register his own devices (smart bulbs, smart locks, thermostats) and then monitor them and send commands. ( ex. change the color of the bulb or set a different room temperature) Another feature is to allow the owners to form groups of other users and grant them rights to control their devices.</p>
+         <p>&nbsp;</p>
+         <p>
+	    <figure typeof="sa:Image">
+              <img style="display: block; margin-left: auto; margin-right: auto;" src="https://i.imgur.com/CLq6gEv.png" alt="" width="486" height="243" />
+              <figcaption style="text-align:center;">  Figure 1. SmartHome Users</figcaption>
+          </figure>
+	</p>
+
+         <p>
+	<figure typeof="sa:Image">
+             <img style="display: block; margin-left: auto; margin-right: auto;" src="https://raw.githubusercontent.com/mrabobi/WWW/main/Resources/Diagrams/UseCase.png" alt="" width="608" height="529" />
+              <figcaption style="text-align:center;"> Figure 2. SmartHome UseCase diagram</figcaption>
+          </figure>
+	</p>
+      </section>
+      <section id="linked-data-principles">
+         <h2>Linked Data Principles</h2>
+         <p><strong>The principles are:</strong></p>
+         <ul>
+            <li>Use URIs as names for things.</li>
+            <li>Use HTTP URIs so that people can look up those names.</li>
+            <li>When someone looks up a URI, provide useful information.</li>
+            <li>Include links to other URIs. so that they can discover more things.</li>
+         </ul>
+         <p>&nbsp;</p>
+         <p>&nbsp; &nbsp;The application is following the linked data principles by using unique ids to identify each device and each user. Furthermore, for each type of device the DBpedia endpoint is used to provide HTTP URIs where more information about the device can be found including the definition and other links (<a href=https://dbpedia.org/page/Thermostat>https://dbpedia.org/page/Thermostat</a>, <a href=https://dbpedia.org/page/Lock_and_key>https://dbpedia.org/page/Lock_and_key</a>, <a href="https://dbpedia.org/page/Incandescent_light_bulb">https://dbpedia.org/page/Incandescent_light_bulb &nbsp;</a>).&nbsp; &nbsp; &nbsp;When a device is queried, one also receives data about the owner making it easy to discover more things and keeping the data linked. The entire data regarding one user can be uncovered by traversing the knowledge graph with the user node as a starting point. For example, we could discover if we can get his devices by listing all the objects that the user has a relation of type &ldquo;owns&rdquo; with or we can check if a user has control over a device that he does not owns by going to all the groups that the user has an &ldquo;inGroup&rdquo; relation with and checking that the group owner matches the device owner, and then checking the group rights.</p>
+      </section>
+      <section id="technologies-utilized">
+         <h2>Technologies utilized</h2>
+         <ul>
+            <li><span style="font-weight: 400;">&nbsp;</span><a href="https://dotnet.microsoft.com/download"><span style="font-weight: 400;">.NET Core</span></a></li>
+         </ul>
+         <p><span style="font-weight: 400;">A well-known cross-platform framework, frequently used with the </span><a href="https://docs.microsoft.com/en-us/dotnet/csharp/"><span style="font-weight: 400;">C#</span></a><span style="font-weight: 400;"> programming language. It allows for the development of a variety of applications, such as mobile, desktop, </span><strong>web</strong><span style="font-weight: 400;">, cloud, </span><strong>IoT</strong><span style="font-weight: 400;">, machine learning, </span><strong>microservices</strong><span style="font-weight: 400;">, games, etc.</span></p>
+         <ul>
+            <li><span style="font-weight: 400;">&nbsp;</span><a href="https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor"><span style="font-weight: 400;">Blazor</span></a></li>
+         </ul>
+         <p><span style="font-weight: 400;">Blazor is a relatively new technology that is part of ASP.NET, it allows the developer to build interactive web UIs using C# instead of Javascript. It has a client side version and a server side version. The server side version will be used for this implementation to fully benefit from all the features of the .NET ecosystem, some of those not being accessible in the client side version. The UI components are built on the server and then sent to the client via SignalR. The communication via SignalR makes real-time UI updates possible.</span></p>
+         <ul>
+            <li><a href="https://www.stardog.com/"><span style="font-weight: 400;">Stardog</span></a></li>
+         </ul>
+         <p><span style="font-weight: 400;">A knowledge graph platform that enables clients to unify all their data, including data sources and databases of every type. It provides high availability, high performance reasoning, and virtualization. Among the supported programming languages are Java, Python, Javascript and C#. Using virtual graphs, Stardog can aggregate multiple data sources into one or more knowledge graphs.</span></p>
+         <ul>
+            <li><a href="https://azure.microsoft.com/en-us/"><span style="font-weight: 400;">Microsoft Azure</span></a></li>
+         </ul>
+         <p><span style="font-weight: 400;">A cloud computing service provided and operated by Microsoft. It is among the largest and most used cloud services right now, allowing the integration of both Microsoft specific and third party tools and systems. It can be used with various degrees of customer input, providing the well known IaaS, PaaS and SaaS models among many other paradigms. More specifically, the Azure services used in the implementation are as follows:</span></p>
+         <ul>
+            <li style="font-weight: 400;" aria-level="1"><a href="https://azure.microsoft.com/en-us/services/active-directory/external-identities/b2c/#features"><span style="font-weight: 400;">Azure AD B2C</span></a><span style="font-weight: 400;">, a customer identity management solution, taking care of the scaling and security of the whole process. It can be used with social, enterprise or local accounts.</span></li>
+            <li style="font-weight: 400;" aria-level="1"><a href="https://azure.microsoft.com/en-us/products/azure-sql/database/#overview"><span style="font-weight: 400;">Azure SQL Database</span></a><span style="font-weight: 400;">, a service that allows the hosting of relational databases in the cloud.</span></li>
+            <li style="font-weight: 400;" aria-level="1"><a href="https://azure.microsoft.com/en-us/services/app-service/"><span style="font-weight: 400;">Azure App Service</span></a><span style="font-weight: 400;">, a cloud-based web application hosting service.</span></li>
+            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">More services (for example </span><a href="https://azure.microsoft.com/en-us/services/key-vault/"><span style="font-weight: 400;">Key Vault</span></a><span style="font-weight: 400;">) might be integrated as the implementation progresses..</span></li>
+         </ul>
+      </section>
+      <section id="architecture">
+         <h2>Architecture</h2>
+         <p><span style="font-weight: 400;">The application&rsquo;s architecture is a modular one, employing multiple services in the form of APIs for data retrieval and data manipulation and cloud based services for other aspects like security. Also, a service that acts as a bridge between the devices and the other components will be used, it will provide live updates based on the data provided by various devices. The main communication protocol used is HTTP(s), with some device specific protocols being used for retrieving sensor data (MQTT).</span></p>
+         <p><span style="font-weight: 400;">.&nbsp;</span></p>
+         <ul>
+            <li style="font-weight: 400;" aria-level="1"><strong>User interface</strong><span style="font-weight: 400;">, a visual interface that will be presented to the end user, allowing him to query and alter certain sections of the knowledge graph. This component will implement user authentication via Azure AD B2c. An authenticated user will be able to view and alter the devices that he owns and the devices that he has to via group claims. The user can also manage the groups that he owns (family, friends, associates, etc) by adding or removing other users.</span></li>
+            <li style="font-weight: 400;" aria-level="1"><strong>Users API</strong><span style="font-weight: 400;">, a service that performs CRUD operations on the user data. It exposes endpoints related to the users and groups (and group claims). The communication with this component will be authorized via Azure AD B2C using OAuth.</span></li>
+            <li style="font-weight: 400;" aria-level="1"><strong>Things API</strong><span style="font-weight: 400;">, a service that performs CRUD operations on the things data. It exposes endpoints related to various device types (smart bulbs, smart locks, smart thermostats with the possibility to add more devices during the implementation). The communication with this component will be authorized via Azure AD B2C using OAuth.</span></li>
+            <li style="font-weight: 400;" aria-level="1"><strong>Stardog</strong><span style="font-weight: 400;">, it will provide a middleware for querying and altering data. This component will provide a knowledge graph representation of the date and will allow it to be queried and altered via SPARQL.</span></li>
+            <li style="font-weight: 400;" aria-level="1"><strong>User Database</strong><span style="font-weight: 400;">, a database that will store user related data.</span></li>
+            <li style="font-weight: 400;" aria-level="1"><strong>Things Database</strong><span style="font-weight: 400;">, a database that will store things related data</span></li>
+            <li style="font-weight: 400;" aria-level="1"><strong>Things Monitor</strong><span style="font-weight: 400;">, a service that will communicate with a variety of devices via specific protocols (like MQTT). It will capture real-time data from the sensors and will update the Things Database accordingly, for example, it will alter the room temperature in real time according to sensor data. It acts as a bridge for&nbsp; communication between the devices and the rest of the application.</span></li>
+         </ul>
+         <p><span style="font-weight: 400;">The pictures below present a general view of the application&rsquo;s architecture and it&rsquo;s containerization (including the user input entry point).</span></p>
+         <p>&nbsp;</p>
+         <p>&nbsp;</p>
+
+         <p>
+<figure typeof="sa:Image">
+         <img style="display: block; margin-left: auto; margin-right: auto;" src="https://github.com/mrabobi/WWW/blob/main/Resources/Diagrams/Architecture.png?raw=true" alt="" width="608" height="529" />
+            <figcaption style="text-align:center;">Figure 3. SmartHome Architecture diagram</figcaption>
+          </figure>
+</p>
+
+         <p>
+<figure typeof="sa:Image">
+         <img style="display: block; margin-left: auto; margin-right: auto;" src="https://github.com/mrabobi/WWW/blob/main/Resources/Diagrams/C4.png?raw=true" alt="" width="608" height="529" />
+            <figcaption style="text-align:center;">Figure 4. SmartHome C4-Container diagram</figcaption>
+          </figure>
+</p>
+      </section>
+      <section id="data-schema">
+         <h2>Data Schema</h2>
+         <p><span style="font-weight: 400;">The data will be stored in two databases, une for the device related data and one for the user related data. These two databases will be turned into a knowledge graph and queried via SPARQL using Stardog&rsquo;s virtual graph feature. The key that binds the two schemas will be the unique identifier for the users.</span></p>
+         <p><span style="font-weight: 400;">The </span><strong>users </strong><span style="font-weight: 400;">database has the following schema:</span></p>
+         <ul>
+            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Users table: a table containing user data</span></li>
+            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Groups table: a table containing group data</span></li>
+            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Claims table: a table containing claim data</span></li>
+            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">UsersGroups: a bridge table between the Users and Groups tables that will hold info regarding a user&rsquo;s inclusion in one or more groups</span></li>
+            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">GroupsClaims: a bridge table between the Groups and the Claims tables that will hold information regarding the actions that the users belonging to a certain group can do.</span></li>
+         </ul>
+         <p><span style="font-weight: 400;">The </span><strong>things </strong><span style="font-weight: 400;">database has the following schema, more device types might be added in the future:</span></p>
+         <ul>
+            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Things table: a table containing the data common for all devices like ownerId or the device&rsquo;s unique identifier.</span></li>
+            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Bulbs table: contains specific data for the smart bulbs like light color</span></li>
+            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Locks table: contains specific data for the smart locks</span></li>
+            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Thermostat table: contains specific data for the smart thermostats like room temperature</span></li>
+         </ul>
+         <p><span style="font-weight: 400;">When aggregated into the virtual graph, the join on the graphs resulting from each table will be made according to the user identifiers that are present in both of the data sources. The following are some of the triples that will make the knowledge graph:</span></p>
+         <ol>
+            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">userId </span><em><span style="font-weight: 400;">owns </span></em><span style="font-weight: 400;">thingId</span></li>
+            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">usedId </span><em><span style="font-weight: 400;">hasUsername </span></em><span style="font-weight: 400;">usernameValue</span></li>
+            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">thingId </span><em><span style="font-weight: 400;">hasRoom </span></em><span style="font-weight: 400;">roomNameValue</span></li>
+            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">userId </span><em><span style="font-weight: 400;">owns </span></em><span style="font-weight: 400;">groupId</span></li>
+            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">userId </span><em><span style="font-weight: 400;">isPartOf </span></em><span style="font-weight: 400;">groupId</span></li>
+            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">groupId </span><em><span style="font-weight: 400;">hasName </span></em><span style="font-weight: 400;">groupNameValue</span></li>
+            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">groupId </span><em><span style="font-weight: 400;">hasClaim </span></em><span style="font-weight: 400;">claimId</span></li>
+            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">claimId </span><em><span style="font-weight: 400;">hasName </span></em><span style="font-weight: 400;">claimNameValue</span></li>
+            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">thingId </span><em><span style="font-weight: 400;">hasType</span></em><span style="font-weight: 400;"> typeURI</span></li>
+            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">thingId </span><em><span style="font-weight: 400;">isOn </span></em><span style="font-weight: 400;">true/false</span></li>
+         </ol>
+         <p>&nbsp;</p>
+
+</section>
+      <section id="conclusion"typeof="sa:Conclusion">
+         <h2>Conclusion</h2>
+<p>Nowadays, technology advances very fast, new things always appear, and are more and more sophisticated.</p>
+<p>An application like SmartHome is welcome in our lives, it makes life easier for users, either at home or in companies.SmartHome makes managing all of the smart devices a lot easier by unifying the access to their controls and their status into a single central point, taking care of aggregating their data and their specific communication protocols.
+</p>   
+      </section> 
+<section id="team-component" role="doc-acknowledgments" typeof="sa:AuthorsList">
+  <h2>Team component</h2>
+         <span typeof="schema:Person" >
+            <meta property="schema:givenName" content="Demetra Bianca">
+            <meta property="schema:familyName" content="Chirica">
+            <a>
+            <span property="schema:name">Demetra Bianca Chirica</span>
+            </a>
+         </span>
+         </br>
+         <span typeof="schema:Person" >
+            <meta property="schema:givenName" content="Robert Andrei">
+            <meta property="schema:familyName" content="Miron">
+            <a>
+            <span property="schema:name">Robert Andrei Miron</span>
+            </a>
+         </span>
+         </br>
+         <span typeof="schema:Person" >
+            <meta property="schema:givenName" content="Stefan Claudiu">
+            <meta property="schema:familyName" content="Susan">
+            <a>
+            <span property="schema:name">Stefan Claudiu Susan</span>
+            </a>
+         </span>
+      </section>
+   </body>
+</html>
