@@ -9,7 +9,7 @@
         </MudItem>
     </MudGrid>
 }
-else if (UserGroups[0].OwnerId==AppState.CurrentUser.UserId)
+else if (UserGroups.Count>0 && UserGroups[0].OwnerId==AppState.CurrentUser.UserId)
 {
     <MudGrid>
         <MudItem xs="2" />
