@@ -59,7 +59,7 @@ namespace SmartHome.UI.Pages
             }
         }
 
-        private async Task GoToDetails(string groupId)
+        private  void GoToDetails(string groupId)
         {
             AppState.CurrentGroupId = groupId;
             NavigationManager.NavigateTo("GroupDetails", forceLoad: true);
