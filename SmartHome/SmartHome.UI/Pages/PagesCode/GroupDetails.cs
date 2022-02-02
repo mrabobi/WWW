@@ -147,7 +147,7 @@ namespace SmartHome.UI.Pages
 
         private async Task AddThingClaimToGroup()
         {
-            var thingId = GroupData.AvailableThings.FirstOrDefault(t =>t.thingId  == SelectedValueThings)?.thingId;
+            var thingId = GroupData.AvailableThings.FirstOrDefault(t =>t.thingId  == SelectedValueThings)?.validation_url;
             var currrentGroup = AppState.CurrentGroupId;
             if (string.IsNullOrEmpty(thingId))
             {
@@ -162,9 +162,9 @@ namespace SmartHome.UI.Pages
             }
             else
             {
-                var addedClaim = GroupData.AvailableThings.FirstOrDefault(thing => thing.thingId == thingId);
+                var addedClaim = GroupData.AvailableThings.FirstOrDefault(thing => thing.thingId == SelectedValueThings);
                 GroupData.GroupThings.Add(addedClaim);
-                GroupData.AvailableThings = GroupData.AvailableThings.Where(thing => thing.thingId != thingId).ToList();
+                GroupData.AvailableThings = GroupData.AvailableThings.Where(thing => thing.thingId != SelectedValueThings).ToList();
                 SnackBar.Add("Claim added", Severity.Success);
             }
         }

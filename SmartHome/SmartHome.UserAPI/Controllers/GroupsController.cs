@@ -68,7 +68,7 @@ namespace SmartHome.API.Controllers
                 return BadRequest();
             }
         }
-
+        
         [HttpGet("GetWithUsers/{groupdId}")]
         public ActionResult<Group> GetWithUsers(string groupdId)
         {

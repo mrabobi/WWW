@@ -83,11 +83,21 @@ namespace SmartHome.UI.Pages
             var parameters = new Dictionary<string, string>();
             foreach (var parameter in action.parameters)
             {
-                if(parameter.type=="int" && !int.TryParse(ParameterValues[thingId + parameter.name],out _))
+                var intValue = 0;
+                if(parameter.type=="int" && !int.TryParse(ParameterValues[thingId + parameter.name],out intValue))
                 {
                     SnackBar.Add($"Invalid value for parameter {parameter.name}", Severity.Error);
                     DataIsLoading = false;
                     return;
+                }
+                else if(int.TryParse(parameter.minimum,out var minimumInt) && int.TryParse(parameter.maximum, out var maximumInt))
+                {
+                     if(intValue < minimumInt || intValue>maximumInt)
+                    {
+                        SnackBar.Add($"Invalid value for parameter {parameter.name}", Severity.Error);
+                        DataIsLoading = false;
+                        return;
+                    }
                 }
                 parameters[parameter.name] = ParameterValues[thingId + parameter.name];
             }
@@ -109,11 +119,12 @@ namespace SmartHome.UI.Pages
                 var result = await ApiClient.DoAction(action.IRI, parameters);
                 if(result==null)
                 {
-                    SnackBar.Add($"Action success, result:{result}", Severity.Error);
+                    SnackBar.Add("Action failed", Severity.Error);
+
                 }
                 else
                 {
-                    SnackBar.Add("Action failed", Severity.Error);
+                    SnackBar.Add($"Action success, result:{result}", Severity.Success);
                 }
             }
             DataIsLoading = false;

@@ -32,7 +32,7 @@ namespace SmartHome.UI.Pages
             if(success)
             {
                 Things.Where(t => t.validation_url != thing.validation_url);
-                SnackBar.Add("Could not activate device, check the activation key", Severity.Error);
+                SnackBar.Add("Device activated", Severity.Success);
             }
             else
             {

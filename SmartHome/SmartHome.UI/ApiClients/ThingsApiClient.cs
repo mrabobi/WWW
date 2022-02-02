@@ -137,6 +137,7 @@ namespace SmartHome.UI.ApiClients
 
         public async Task<string> DoAction(string apiUrl,Dictionary<string,string> parameters)
         {
+            parameters["value"] = "true";
             var request = new HttpRequestMessage
             {
                 Method = HttpMethod.Post,
@@ -158,6 +159,7 @@ namespace SmartHome.UI.ApiClients
 
         public async Task<bool> DoActionVoid(string apiUrl, Dictionary<string, string> parameters)
         {
+            parameters["value"] = "true";
             var request = new HttpRequestMessage
             {
                 Method = HttpMethod.Post,
@@ -167,5 +169,9 @@ namespace SmartHome.UI.ApiClients
             var response = await HttpClient.SendAsync(request);
             return response.IsSuccessStatusCode;
         }
+    }
+    public class ResponseMessage
+    {
+        public string value { get; set; }
     }
 }

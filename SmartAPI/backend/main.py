@@ -3,6 +3,7 @@ from backend.data import getDevices, PORT, map_functions
 from flask import request
 from flask import Flask
 from flask import Response
+import json
 import threading
 
 window = getWindow()
@@ -20,7 +21,7 @@ def not_connected():
             data_device['description'] = str(devices[deviceid]['description'])
             data_device['validation_url'] = str(devices[deviceid]['IRI'])
             not_connected_devices.append(data_device)
-    return Response("{'answer': " + str(not_connected_devices) + "}", status=200, mimetype='application/json')
+    return Response(json.dumps(not_connected_devices), status=200, mimetype='application/json')
 
 
 @app.route('/<product_id>', methods=['GET', 'POST'])
@@ -73,11 +74,11 @@ def action_operations(product_id, action):
                 if ans is not None:
                     return Response("{'value' : '" + str(ans) + "' }", status=200, mimetype='application/json')
                 else:
-                    return Response("{'answer' : 'Missing required parameters!'}", status=404, mimetype='application/json')
+                    return Response("{'answer' : 'Missing required parameters!'}", status=404,
+                                    mimetype='application/json')
         return Response("{'answer' : 'Not found'}", status=404, mimetype='application/json')
 
 
 if __name__ == '__main__':
     threading.Thread(target=lambda: app.run(port=PORT)).start()
     threading.Thread(target=lambda: window.mainloop()).run()
-

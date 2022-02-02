@@ -1,5 +1,6 @@
 ﻿@page "/Groups"
 @using SmartHome.UI.Data
+@using SmartHome.UI_Auth.Utils
 @if (UserGroups == null)
 {
     <MudGrid>
@@ -8,7 +9,7 @@
         </MudItem>
     </MudGrid>
 }
-else
+else if (UserGroups[0].OwnerId==AppState.CurrentUser.UserId)
 {
     <MudGrid>
         <MudItem xs="2" />

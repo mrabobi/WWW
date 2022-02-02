@@ -35,6 +35,7 @@ namespace SmartHome.UI_Auth.Utils
             }
             else
             {
+                var success = await ApiClient.AddUser(user);
                 AppState.CurrentUser = user;
             }
 

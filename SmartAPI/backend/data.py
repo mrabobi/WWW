@@ -28,7 +28,7 @@ ledActions = {
     }
 
 lockActions = {
-    "isSomeoneInside": {"description": "Tells if there are people in the room.", "type": "boolean", "uriVariables": []},
+    "isSomeoneInside": {"description": "Tells if there are people in the room.", "type": "boolean", "parameters": []},
     "unlockForSeconds": {"description": "Unlock the room for x seconds.", "type": "void", "parameters": [
         {"name": "duration", "type": "int", "minimum": "15", "maximum": "180"}]}
 }
