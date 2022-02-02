@@ -31,7 +31,7 @@ namespace SmartHome.UI.Pages
             var success = await ApiClient.ActivateThing(thing);
             if(success)
             {
-                Things.Where(t => t.validation_url != thing.validation_url);
+                Things=Things.Where(t => t.validation_url != thing.validation_url).ToList();
                 SnackBar.Add("Device activated", Severity.Success);
             }
             else

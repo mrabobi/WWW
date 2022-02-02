@@ -2,7 +2,7 @@
 <AuthorizeView>
     <Authorized>
         <a href="Identity/Account/Manage">Hello, @context.User.Identity.Name!</a>
-        <form method="post" action="MicrosoftIdentity/Account/SignOut">
+        <form method="get" action="MicrosoftIdentity/Account/SignOut">
             <button type="submit" class="nav-link btn btn-link">Log out</button>
         </form>
     </Authorized>
