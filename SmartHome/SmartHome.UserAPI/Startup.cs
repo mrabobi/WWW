@@ -38,7 +38,7 @@ namespace SmartHome.API
             services.AddSwaggerGen(x =>
             {
                 x.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
-                x.SwaggerDoc("v1", new OpenApiInfo() { Title = "User API", Description = "An API used to retrieve and alter user-related data.", Version = "v1" });
+                x.SwaggerDoc("v2", new OpenApiInfo() { Title = "Smart Home API", Description = "An API used to retrieve and alter user, group and thing-related data via Stardog and SPARQL.", Version = "v2" });
             });
 
         }
